@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="minimal_layout">
+        &lt;!DOCTYPE html&gt;
+        <html style="height: 0;">
+            <head>
+                <base t-att-href="base_url"/>
+                <t t-call-assets="web.report_assets_pdf" t-js="false"/>
+                <t t-call-assets="web.report_assets_common" t-js="false"/>
+                <t t-call-assets="web.report_assets_pdf" t-css="false"/>
+                <meta charset="utf-8"/>
+                <script t-if="subst">
+                    function subst() {
+                        var vars = {};
+                        var x = document.location.search.substring(1).split('&amp;');
+                        for (var i in x) {
+                            var z = x[i].split('=', 2);
+                            vars[z[0]] = unescape(z[1]);
+                        }
+                        var x = ['sitepage', 'sitepages', 'section', 'subsection', 'subsubsection'];
+                        var z = {'sitepage': 'page', 'sitepages': 'topage'};
+                        for (var i in x) {
+                            var y = document.getElementsByClassName(z[x[i]] || x[i])
+                            for (var j=0; j&lt;y.length; ++j)
+                                y[j].textContent = vars[x[i]];
+                        }
+
+                        var index = vars['webpage'].split('.', 4)[3];
+                        var header = document.getElementById('minimal_layout_report_headers');
+                        if(header){
+                            var companyHeader = header.children[index];
+                            header.textContent = '';
+                            header.appendChild(companyHeader);
+                        }
+                        var footer = document.getElementById('minimal_layout_report_footers');
+                        if(footer){
+                            var companyFooter = footer.children[index];
+                            footer.textContent = '';
+                            footer.appendChild(companyFooter);
+                        }
+                    }
+                </script>
+            </head>
+            <body class="container" t-att-data-report-id="report_xml_id" t-att-onload="subst and 'subst()'" style="overflow:hidden">
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+    <template id="report_eval_participant">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="file">  
+                <t t-set="font_color" t-value="file.training_company_id.di_font_color"/>
+                <t t-set="background_color" t-value="file.training_company_id.di_background_color"/>
+                <t t-foreach="file.participant_ids.sorted(key = lambda p: p.name)" t-as="participant">
+                    <div class="header">
+                        <img t-if="file.training_company_id.logo" t-att-src="image_data_uri(file.training_company_id.logo)" style="max-width:100pt;max-height:75pt" alt="Logo"/>
+                        <p/>
+                    </div>
+                    <h2 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">Hot evaluation <br/> participant</h2>
+                    
+                    <div class="page">
+                        <p><span style="font-weight:bold">Company :</span> <span t-field="file.customer_id.name"/> <br/>
+                        <span style="font-weight:bold">Participant :</span> <span t-field="participant.name"/><br/>
+                        <span style="font-weight:bold">Trainer(s) :</span> <t t-foreach="file.trainer_ids" t-as="trainer">
+                                        <span t-field="trainer.name"/>,
+                                    </t> <br/>
+                        <span style="font-weight:bold">Title :</span> <span t-field="file.training_type_id.name"/> <br/>
+                        <span style="font-weight:bold">Date(s) and place of the training :</span> <span t-field="file.start_date"/> to <span t-field="file.end_date"/> 
+                        at <span t-field="file.place_name"/></p>
+                        
+                        <table class="table table-bordered">
+                            <tr>
+                                <td style="text-align:center;font-weight:bold"></td>
+                                <td style="text-align:center;width:100pt;font-weight:bold">Appreciations</td>
+                                <td width="50%" style="text-align:center"><span style="text-align:center;font-weight:bold">Comments</span></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;font-weight:bold">The content of the training</td>
+                                <td><img src="/qualiopi/static/description/feedback.png" style="max-width:100pt;max-height:100pt;" alt="Feedback"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;font-weight:bold">The pedagogical approach</td>
+                                <td><img src="/qualiopi/static/description/feedback.png" style="max-width:100pt;max-height:100pt;" alt="Feedback"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;font-weight:bold">The material and teaching tools (exercises - support)</td>
+                                <td><img src="/qualiopi/static/description/feedback.png" style="max-width:100pt;max-height:100pt;" alt="Feedback"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;font-weight:bold">Quality of the animation</td>
+                                <td><img src="/qualiopi/static/description/feedback.png" style="max-width:100pt;max-height:100pt;" alt="Feedback"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;font-weight:bold">Possibility of professional application</td>
+                                <td><img src="/qualiopi/static/description/feedback.png" style="max-width:100pt;max-height:100pt;" alt="Feedback"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="font-weight:bold;height:70pt">Highlights of the course</td>
+                                <td style="font-weight:bold;height:70pt">Weaknesses of the course</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="font-weight:bold;height:70pt">General appreciation</td>
+                            </tr>
+                        </table>
+                        <p style="text-align:center"><img src="/qualiopi/static/description/case.png"  alt="Feedback"/>  Very Good  <img src="/qualiopi/static/description/case.png"  alt="Feedback"/>  Good  <img src="/qualiopi/static/description/case.png"  alt="Feedback"/>  Medium  <img src="/qualiopi/static/description/case.png"  alt="Feedback"/>  Mediocre  <img src="/qualiopi/static/description/case.png"  alt="Feedback"/>  Bad </p>
+                    </div>
+                              
+                    <div class="footer">
+                        <h6 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">
+                            <span t-field="file.training_company_id.di_footer"/>
+                        </h6>
+                    </div>
+                    <p style="page-break-after:always;"></p>
+                </t>
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>

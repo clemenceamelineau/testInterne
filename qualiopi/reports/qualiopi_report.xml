@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- PAPERFORMAT -->
+    <record id="paperformat_qualiopi_A4_euro_landscape" model="report.paperformat">
+        <field name="name">Qualiopi A4 landscape</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">15</field>
+        <field name="dpi">90</field>
+    </record>
+    
+    <record id="paperformat_qualiopi_A4_euro_portrait" model="report.paperformat">
+        <field name="name">Qualiopi A4 portrait</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">20</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">15</field>
+        <field name="dpi">90</field>
+    </record>
+
+
+    <!-- REPORT -->
+    
+    <record id="action_report_achievement_certificate" model="ir.actions.report">
+        <field name="name">Achievement certificate</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_achievement_certificate</field>
+        <field name="report_file">qualiopi.report_achievement_certificate</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_eval_customer" model="ir.actions.report">
+        <field name="name">Cold evaluation</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_eval_customer</field>
+        <field name="report_file">qualiopi.report_eval_customer</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_convocation_training_distance" model="ir.actions.report">
+        <field name="name">Convocation Training Distance</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_convocation_training_distance</field>
+        <field name="report_file">qualiopi.report_convocation_training_distance</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_convocation_training_on_site" model="ir.actions.report">
+        <field name="name">Convocation Training On Site</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_convocation_training_on_site</field>
+        <field name="report_file">qualiopi.report_convocation_training_on_site</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>    
+    
+    <record id="action_report_eval_participant" model="ir.actions.report">
+        <field name="name">Evaluation participant</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_eval_participant</field>
+        <field name="report_file">qualiopi.report_eval_participant</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_eval_trainer" model="ir.actions.report">
+        <field name="name">Evaluation trainer</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_eval_trainer</field>
+        <field name="report_file">qualiopi.report_eval_trainer</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_sign_in_sheet" model="ir.actions.report">
+        <field name="name">Sign-in sheet</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_sign_in_sheet</field>
+        <field name="report_file">qualiopi.report_sign_in_sheet</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_landscape"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_training_agreement" model="ir.actions.report">
+        <field name="name">Training agreement</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_training_agreement</field>
+        <field name="report_file">qualiopi.report_training_agreement</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+    <record id="action_report_training_certificate" model="ir.actions.report">
+        <field name="name">Training certificate</field>
+        <field name="model">di.training.file</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">qualiopi.report_training_certificate</field>
+        <field name="report_file">qualiopi.report_training_certificate</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="paperformat_qualiopi_A4_euro_portrait"/>
+
+        <field name="binding_model_id" ref="model_di_training_file"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="minimal_layout">
+        &lt;!DOCTYPE html&gt;
+        <html style="height: 0;">
+            <head>
+                <base t-att-href="base_url"/>
+                <t t-call-assets="web.report_assets_pdf" t-js="false"/>
+                <t t-call-assets="web.report_assets_common" t-js="false"/>
+                <t t-call-assets="web.report_assets_pdf" t-css="false"/>
+                <meta charset="utf-8"/>
+                <script t-if="subst">
+                    function subst() {
+                        var vars = {};
+                        var x = document.location.search.substring(1).split('&amp;');
+                        for (var i in x) {
+                            var z = x[i].split('=', 2);
+                            vars[z[0]] = unescape(z[1]);
+                        }
+                        var x = ['sitepage', 'sitepages', 'section', 'subsection', 'subsubsection'];
+                        var z = {'sitepage': 'page', 'sitepages': 'topage'};
+                        for (var i in x) {
+                            var y = document.getElementsByClassName(z[x[i]] || x[i])
+                            for (var j=0; j&lt;y.length; ++j)
+                                y[j].textContent = vars[x[i]];
+                        }
+
+                        var index = vars['webpage'].split('.', 4)[3];
+                        var header = document.getElementById('minimal_layout_report_headers');
+                        if(header){
+                            var companyHeader = header.children[index];
+                            header.textContent = '';
+                            header.appendChild(companyHeader);
+                        }
+                        var footer = document.getElementById('minimal_layout_report_footers');
+                        if(footer){
+                            var companyFooter = footer.children[index];
+                            footer.textContent = '';
+                            footer.appendChild(companyFooter);
+                        }
+                    }
+                </script>
+            </head>
+            <body class="container" t-att-data-report-id="report_xml_id" t-att-onload="subst and 'subst()'" style="overflow:hidden">
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+    <template id="report_eval_customer">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="file">  
+                <t t-set="font_color" t-value="file.training_company_id.di_font_color"/>
+                <t t-set="background_color" t-value="file.training_company_id.di_background_color"/>
+                <div class="header">
+                    <img t-if="file.training_company_id.logo" t-att-src="image_data_uri(file.training_company_id.logo)" style="max-width:100pt;max-height:75pt" alt="Logo"/>
+                    <p/>
+                </div>
+                <h2 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">Cold evaluation <br/> of the training</h2>
+                
+                <div class="page">
+                    <p style="font-weight:italic,font-size:smaller">
+                        In order to evaluate your level of satisfaction with the training your employees have received, please take a few minutes to complete this to answer this questionnaire. 
+                        Your opinion will allow us to improve the quality of our services by taking into account your expectations.
+                    </p>
+                    <p> <span style="font-weight:bold">Company : </span><span t-field="file.customer_id.name"/> <br/>
+                    <span style="font-weight:bold">Trainer(s) : </span><t t-foreach="file.trainer_ids" t-as="trainer">
+                                    <span t-field="trainer.name"/>,
+                                </t> <br/>
+                    <span style="font-weight:bold">Training : </span><span t-field="file.training_type_id.name"/> <br/>
+                    <span style="font-weight:bold">Date(s) and place of the training :</span> <span t-field="file.start_date"/> to <span t-field="file.end_date"/> 
+                    at <span t-field="file.place_name"/> <br/></p>
+                    
+                    <ol>
+                        <li style="height:100pt">At the end of the training, were you able to assess the contribution of the training to the daily life of the trainees who the training ? <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> Yes &#160; &#160; &#160; &#160;<img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> No
+                        </li>
+                        
+                        <li style="height:100pt">Does the training chosen allow the trainees to use the software correctly ? <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> Yes &#160; &#160; &#160; &#160;<img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> No
+                            <br/> If not, why :
+                        </li>
+                        
+                        <li style="height:100pt">In your opinion, was the objective of the training achieved ? <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> Yes &#160; &#160; &#160; &#160;<img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> No
+                            <br/> If not, why :
+                        </li>
+                        
+                        <li style="height:100pt">Do you think your company is more successful as a result of this training ? <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> Yes &#160; &#160; &#160; &#160;<img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> No
+                            <br/> If not, why :
+                        </li>
+                        
+                        <li style="height:100pt">Describe in a few words what this training has brought to your company ? <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> Yes &#160; &#160; &#160; &#160;<img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> No
+                        </li>
+                        
+                        <li style="height:100pt">Are you considering requesting additional training from our educational team ? <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> Yes &#160; &#160; &#160; &#160;<img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="Feedback"/> No
+                            <br/> If yes, which one ?
+                        </li>
+                    </ol>
+                </div>
+                          
+                <div class="footer">
+                    <h6 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">
+                        <span t-field="file.training_company_id.di_footer"/>
+                    </h6>
+                </div>
+                <p style="page-break-after:always;"></p>
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="qualiopi_res_partner" model="ir.ui.view">
+        <field name="name">qualiopi.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="di_siret" placeholder="e.g. 123 568 941 00056" attrs="{'invisible': [('is_company', '=', False)]}"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="di_internal_company" attrs="{'invisible': [('is_company', '=', False)]}"/>
+            </xpath>
+            
+            <xpath expr="//page[@name='internal_notes']" position="before">
+                <page name="administrative_document" string="Administrative document">
+                    <group>
+                        <field name="di_attachment_ids" widget="many2many_binary"/>
+                    </group>
+                </page>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

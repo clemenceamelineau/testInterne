@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="minimal_layout">
+        &lt;!DOCTYPE html&gt;
+        <html style="height: 0;">
+            <head>
+                <base t-att-href="base_url"/>
+                <t t-call-assets="web.report_assets_pdf" t-js="false"/>
+                <t t-call-assets="web.report_assets_common" t-js="false"/>
+                <t t-call-assets="web.report_assets_pdf" t-css="false"/>
+                <meta charset="utf-8"/>
+                <script t-if="subst">
+                    function subst() {
+                        var vars = {};
+                        var x = document.location.search.substring(1).split('&amp;');
+                        for (var i in x) {
+                            var z = x[i].split('=', 2);
+                            vars[z[0]] = unescape(z[1]);
+                        }
+                        var x = ['sitepage', 'sitepages', 'section', 'subsection', 'subsubsection'];
+                        var z = {'sitepage': 'page', 'sitepages': 'topage'};
+                        for (var i in x) {
+                            var y = document.getElementsByClassName(z[x[i]] || x[i])
+                            for (var j=0; j&lt;y.length; ++j)
+                                y[j].textContent = vars[x[i]];
+                        }
+
+                        var index = vars['webpage'].split('.', 4)[3];
+                        var header = document.getElementById('minimal_layout_report_headers');
+                        if(header){
+                            var companyHeader = header.children[index];
+                            header.textContent = '';
+                            header.appendChild(companyHeader);
+                        }
+                        var footer = document.getElementById('minimal_layout_report_footers');
+                        if(footer){
+                            var companyFooter = footer.children[index];
+                            footer.textContent = '';
+                            footer.appendChild(companyFooter);
+                        }
+                    }
+                </script>
+            </head>
+            <body class="container" t-att-data-report-id="report_xml_id" t-att-onload="subst and 'subst()'" style="overflow:hidden">
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+    <template id="report_convocation_training_distance">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="file">  
+                <t t-set="font_color" t-value="file.training_company_id.di_font_color"/>
+                <t t-set="background_color" t-value="file.training_company_id.di_background_color"/>
+                <t t-foreach="file.participant_ids.sorted(key = lambda p: p.name)" t-as="participant">
+                    
+                    <div class="header">
+                        <img t-if="file.training_company_id.logo" t-att-src="image_data_uri(file.training_company_id.logo)" style="max-width:100pt;max-height:75pt" alt="Logo"/>
+                        <p/>
+                    </div>
+                    <h2 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">Convocation of distance learning</h2>
+                    <div class="page">
+                        
+                        <div>
+                            <p>
+                                <span style="font-weight:bold" t-field="file.customer_id.name"/><br/>
+                                <span style="font-weight:bold" t-field="participant.name"/><br/>
+                                <t t-if="file.customer_id.street">
+                                    <span style="font-weight:bold" t-field="file.customer_id.street"/><br/>
+                                </t>
+                                <t t-if="file.customer_id.zip or file.customer_id.city">
+                                    <span style="font-weight:bold" t-field="file.customer_id.zip"/> <span style="font-weight:bold" t-field="file.customer_id.city"/>
+                                </t>
+                            </p>
+                            <p>Dear Sir or Madam, </p>
+                            <p>We are pleased to invite you to the <span style="font-weight:bold" t-field="file.training_type_id.name"/> training which will take place : </p>
+                            <p style="font-weight:bold">Training dates</p>
+                            <t t-foreach="file.presence_ids.sorted(key = lambda p: p.date_presence.name)" t-as="presence">
+                                <t t-if="presence.participant_name==participant.name">
+                                    <!-- Calcul nombre de jours et d'heures -->
+                                    <t t-set="am" t-value="file.end_hours_am - file.start_hours_am"/>
+                                    <t t-set="pm" t-value="file.end_hours_pm - file.start_hours_pm"/>
+                                    
+                                    <t t-set="d" t-value="0"/>
+                                    <t t-set="h" t-value="0"/>
+                                    <tr t-foreach="file.presence_ids" t-as="presence_check">
+                                        <t t-if="presence_check.participant_name==participant.name">
+                                            <t t-if="presence_check.date_am_expected == True">
+                                                <t t-set="d" t-value="d+0.5"/>
+                                                <t t-set="h" t-value="h+am"/>
+                                            </t>
+                                            <t t-if="presence_check.date_pm_expected == True">
+                                                <t t-set="d" t-value="d+0.5"/>
+                                                <t t-set="h" t-value="h+pm"/>
+                                            </t>
+                                        </t>
+                                    </tr>
+                                    
+                                    <p><span t-style="font-weight:bold" t-field="presence.date_presence.name"/>   
+                                        <t t-if="presence.date_am_expected==True">
+                                            Morning  
+                                        </t>
+                                        <t t-if="presence.date_pm_expected==True">
+                                            Afternoon
+                                        </t>
+                                    </p>
+                                </t>
+                            </t>
+                            <p>
+                                <span style="font-weight:bold"> Hours : </span><span t-field="file.start_hours_am" t-options="{'widget': 'float_time'}"/> to <span t-field="file.end_hours_am" t-options="{'widget': 'float_time'}"/> 
+                                - <span t-field="file.start_hours_pm" t-options="{'widget': 'float_time'}"/> to <span t-field="file.end_hours_pm" t-options="{'widget': 'float_time'}"/> <br/>   
+                                <span style="font-weight:bold"> Duration of training : </span><span t-esc="d"/> day(s) (or <span t-esc="h"/> hours)
+                            </p>
+                            <p>
+                                <span style="font-weight:bold"> Location of the training : </span><span t-field="file.place_name" /> <br/>
+                                <span style="font-weight:bold"> Conditions of access to the training by distance learning :</span> a connection link will be sent to you by email <br/>
+                                <span style="font-weight:bold"> Reminder of the objectives : </span><span t-field="file.training_company_id.di_goal"/>
+                            </p>
+                            <p>For any question, you can contact your trainer or the training department : </p>
+                            <thead>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <t t-foreach="file.trainer_ids" t-as="trainer">
+                                            <p><span style="font-weight:bold" t-field="trainer.name"/> - <span t-field="trainer.email"/></p>
+                                        </t>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p> 
+                                            <span t-field="file.training_company_id.di_training_manager_id.name"/> <br/>
+                                            <span t-field="file.training_company_id.di_training_manager_id.function"/> <br/>
+                                            <span t-field="file.training_company_id.di_training_manager_id.email"/> <br/>
+                                            Tél. <span t-field="file.training_company_id.di_training_manager_id.phone"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </thead>
+                            <p>Wishing you an excellent training, <br/> Sincerely, <br/> The training department</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><span style="font-weight:bold">Dated at :</span> <span t-field="file.training_company_id.city"/></p>
+                                    <p><span style="font-weight:bold">On :</span> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></p>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <p><span style="font-weight:bold">Signature and stamp of the company :</span></p>
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(file.training_company_id.di_signature)" style="width:200pt;height:70pt" alt="Signature"/>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="footer"> 
+                            <h6 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">
+                                <span t-field="file.training_company_id.di_footer"/>
+                            </h6>
+                        </div>       
+                        <p style="page-break-after:always;">   </p>
+                    </div>
+                </t>
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>

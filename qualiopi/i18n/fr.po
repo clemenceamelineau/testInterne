@@ -1,0 +1,2594 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* qualiopi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e-20220520\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-21 12:36+0000\n"
+"PO-Revision-Date: 2022-10-21 12:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ""
+", \n"
+"                            acting in the capacity of"
+msgstr ""
+", \n"
+"                            agissant en qualité de"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ", certifies that :"
+msgstr ", atteste que :"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ", registered under the number :"
+msgstr ", enregistré sous le numéro :"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ", represented by :"
+msgstr ", représenté par :"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+", wihin 30 days of the invoice date, without discount.<br/>\n"
+"                        To be paid: by check or bank transfer to the order of"
+msgstr ""
+", à 30 jours date de facture, sans escompte.<br/>\n"
+"                        À régler : par chèque ou virement bancaire à l'ordre de"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"- \n"
+"                        SIRET :"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"- \n"
+"                        represented by ................................................................................................................................................... on the other side,"
+msgstr ""
+"- \n"
+"                        représenté par ................................................................................................................................................... d'autre part,"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+".<br/>\n"
+"                        All the general conditions of sale are available on"
+msgstr ""
+".<br/>\n"
+"                        L'ensemble des conditions générales de vente est disponible sur"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ""
+"<br/>\n"
+"                                            Company"
+msgstr ""
+"<br/>\n"
+"                                            Société"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid ""
+"<br/>\n"
+"                                            Tél."
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+msgid ""
+"<br/>\n"
+"                                <span style=\"font-weight:bold\"> Conditions of access to the training by distance learning :</span> a connection link will be sent to you by email <br/>\n"
+"                                <span style=\"font-weight:bold\"> Reminder of the objectives : </span>"
+msgstr ""
+"<br/>\n"
+"                                <span style=\"font-weight:bold\"> Conditions d'accès à distance à la formation :</span> un lien de connexion vous serz envoyé par mail <br/>\n"
+"                                <span style=\"font-weight:bold\"> Rappel des objectifs : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid ""
+"<br/>\n"
+"                                <span style=\"font-weight:bold\">Conditions of access to the training :</span>"
+msgstr ""
+"<br/>\n"
+"                                <span style=\"font-weight:bold\">Conditions d'accès à la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">certifies that :</span>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">atteste que :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">legal representative of the training provider : </span>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">représentant légal du dispensateur de formation : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid ""
+"<br/>\n"
+"                            employee of the company"
+msgstr ""
+"<br/>\n"
+"                            salarié(e) de l'entreprise"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid ""
+"<br/>\n"
+"                            followed the training action"
+msgstr ""
+"<br/>\n"
+"                            a suivi l'action de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Amounts still due :</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Sommes restant dues :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Date(s) and place of the training :</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Date(s) et lieu de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Duration of training :</span>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">Durée de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Participant :</span>"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Period :</span>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">Période :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Place :</span>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"font-weight:bold\">Lieu :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Title :</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Intitulé :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Trainer(s) :</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Formateur(s) :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Date(s) and place of the training :</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-weight:bold\">Date(s) et lieu de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Title :</span>"
+msgstr ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Intitulé :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Trainer(s) : </span>"
+msgstr ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Formateur(s) : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Trainer(s) :</span>"
+msgstr ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Formateur(s) :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Training : </span>"
+msgstr ""
+"<br/>\n"
+"                    <span style=\"font-weight:bold\">Intitulé de la formation : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ""
+"<br/> \n"
+"                                        \n"
+"                                        has taken the following training : <br/>"
+msgstr ""
+"<br/> \n"
+"                                        \n"
+"                                        a suivi la formation suivante : <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+msgid ""
+"<br/>   \n"
+"                                <span style=\"font-weight:bold\"> Duration of training : </span>"
+msgstr ""
+"<br/>   \n"
+"                                <span style=\"font-weight:bold\"> Durée de la formation : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid ""
+"<br/>   \n"
+"                                <span style=\"font-weight:bold\">Duration of training :</span>"
+msgstr ""
+"<br/>   \n"
+"                                <span style=\"font-weight:bold\">Durée de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+msgid "<span attrs=\"{'invisible': [('date_am', '=', False)]}\"> to </span>"
+msgstr "<span attrs=\"{'invisible': [('date_am', '=', False)]}\"> à </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+msgid "<span attrs=\"{'invisible': [('date_pm', '=', False)]}\"> to </span>"
+msgstr "<span attrs=\"{'invisible': [('date_pm', '=', False)]}\"> à </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid ""
+"<span class=\"o_form_label\">Partner percent</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Pourcentage partenaire</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title=\"Les valeurs définies ici sont propres à l'entreprise.\" aria-label=\"Les valeurs définies ici sont propres à l'entreprise.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid ""
+"<span class=\"o_form_label\">Training company</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Société formatrice</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title=\"Les valeurs définies ici sont propres à l'entreprise.\" aria-label=\"Les valeurs définies ici sont propres à l'entreprise.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('date_am', '=', "
+"False)]}\"> to </span>"
+msgstr ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('date_am', '=', "
+"False)]}\"> à </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('date_pm', '=', "
+"False)]}\"> to </span>"
+msgstr ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('date_pm', '=', "
+"False)]}\"> à </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "<span class=\"oe_inline\"> to </span>"
+msgstr "<span class=\"oe_inline\"> à </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\"> Dates :</span>"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\"> Duration of training :</span>"
+msgstr "<span style=\"font-weight:bold\"> Durée de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+msgid "<span style=\"font-weight:bold\"> Hours : </span>"
+msgstr "<span style=\"font-weight:bold\"> Heures : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\"> Hours :</span>"
+msgstr "<span style=\"font-weight:bold\"> Heures :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+msgid "<span style=\"font-weight:bold\"> Location of the training : </span>"
+msgstr "<span style=\"font-weight:bold\"> Lieu de la formation : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\"> Location of the training :</span>"
+msgstr "<span style=\"font-weight:bold\"> Lieu de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ""
+"<span style=\"font-weight:bold\"> Nature of the action :</span> (article "
+"L.6313.-1 of the Labor Code) : Action of acquisition and improvement of "
+"knowledge"
+msgstr ""
+"<span style=\"font-weight:bold\"> Nature de l'action :</span> (article "
+"L.6313.-1 du Code du Travail) : Action d'acquisition et de perfectionnement "
+"des connaissances"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\"> Objectives :</span>"
+msgstr "<span style=\"font-weight:bold\"> Objectifs :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ""
+"<span style=\"font-weight:bold\"> Results of the evaluation :</span> "
+"Knowledge gained"
+msgstr ""
+"<span style=\"font-weight:bold\"> Résultats de l'évaluation :</span> "
+"Connaissances acquises"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "<span style=\"font-weight:bold\"><br/>Reminder of the objectives :</span>"
+msgstr "<span style=\"font-weight:bold\"><br/>Rappel des objectifs :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "<span style=\"font-weight:bold\"><br/>Sanitary condition :</span>"
+msgstr "<span style=\"font-weight:bold\"><br/>Condition sanitaire :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid "<span style=\"font-weight:bold\">Company : </span>"
+msgstr "<span style=\"font-weight:bold\">Société : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "<span style=\"font-weight:bold\">Company :</span>"
+msgstr "<span style=\"font-weight:bold\">Société :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Cost :</span>"
+msgstr "<span style=\"font-weight:bold\">Coût :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid "<span style=\"font-weight:bold\">Customer :</span>"
+msgstr "<span style=\"font-weight:bold\">Entreprise :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid ""
+"<span style=\"font-weight:bold\">Date and signature of the trainer :</span>"
+msgstr "<span style=\"font-weight:bold\">Date et signature du formateur :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Date(s) :</span> from"
+msgstr "<span style=\"font-weight:bold\">Date(s) :</span> du"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\">Dated at :</span>"
+msgstr "<span style=\"font-weight:bold\">Fait à :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Duration of training :</span>"
+msgstr "<span style=\"font-weight:bold\">Durée de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<span style=\"font-weight:bold\">Evaluation :</span> Pratical exercises and "
+"questionnaires of the acquired knowledge at the end of the training"
+msgstr ""
+"<span style=\"font-weight:bold\">Évaluation :</span> Exercices pratiques et "
+"questionnaires des acquis en fin de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<span style=\"font-weight:bold\">For the company</span><br/>\n"
+"                            (Name and capacity of the signatory)"
+msgstr ""
+"<span style=\"font-weight:bold\">Pour l'entreprise</span><br/>\n"
+"                            (Nom et qualité du signataire)"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "<span style=\"font-weight:bold\">Hours : </span>"
+msgstr "<span style=\"font-weight:bold\">Heures : </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "<span style=\"font-weight:bold\">I, the undersigned, </span>"
+msgstr "<span style=\"font-weight:bold\">Je soussigné </span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "<span style=\"font-weight:bold\">Location of the training :</span>"
+msgstr "<span style=\"font-weight:bold\">Lieu de la formation :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<span style=\"font-weight:bold\">Nature of the action (article L.6313-1 of "
+"the labor code) :</span> Acquisition and improvement of knowledge"
+msgstr ""
+"<span style=\"font-weight:bold\">Nature de l'action (article L.6313-1 du "
+"Code du Travail) :</span> Acquisition et perfectionnement des connaissances"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "<span style=\"font-weight:bold\">On :</span>"
+msgstr "<span style=\"font-weight:bold\">Le :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Participant(s) :</span>"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Place :</span>"
+msgstr "<span style=\"font-weight:bold\">Lieu :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<span style=\"font-weight:bold\">Program and objectives :</span> see annex 1"
+msgstr ""
+"<span style=\"font-weight:bold\">Programme et objectifs :</span> voir annexe"
+" 1"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid ""
+"<span style=\"font-weight:bold\">Signature and stamp of the company :</span>"
+msgstr ""
+"<span style=\"font-weight:bold\">Signature et cachet de l'entreprise:</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<span style=\"font-weight:bold\">Technical and pedacogical means :</span> "
+"computer equipped with the software. Certified consultant trainer on the "
+"software"
+msgstr ""
+"<span style=\"font-weight:bold\">Moyens techniques et pédagogiques :</span> "
+"poste inf. équipé du logiciel. Formateur consultant certifié sur le logiciel"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Title :</span>"
+msgstr "<span style=\"font-weight:bold\">Intitulé :</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "<span style=\"font-weight:bold\">Training costs :</span> total cost"
+msgstr "<span style=\"font-weight:bold\">Frais de formation :</span> coût total"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid "<span style=\"font-weight:bold\">Training</span> -"
+msgstr "<span style=\"font-weight:bold\">Formation</span> -"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"<span style=\"font-weight:bold\">Validation of the training :</span> "
+"Training certificate and sign-in sheet"
+msgstr ""
+"<span style=\"font-weight:bold\">Validation de la formation :</span> "
+"Attestation de formation et feuille de présence émargée"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "<span style=\"text-align:center;font-weight:bold\">Comments</span>"
+msgstr "<span style=\"text-align:center;font-weight:bold\">Commentaires</span>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid "<span style=\"text-align:center;font-weight:bold\">Name</span>"
+msgstr "<span style=\"text-align:center;font-weight:bold\">Nom</span>"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__end_hours_am
+msgid "AM end"
+msgstr "Fin matinée"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__start_hours_am
+msgid "AM start"
+msgstr "Début matinée"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "ARTICLE 1 - Purpose of the agreement"
+msgstr "ARTICLE 1 - Object de la convention"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "ARTICLE 2 - Financial provisions"
+msgstr "ARTICLE 2 - Dispositions financières"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "ARTICLE 3 - Terms of payment"
+msgstr "ARTICLE 3 - Modalités de règlement"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"ARTICLE 4 - Means allowing to follow the execution, to appreciate the "
+"results and to validate the training action"
+msgstr ""
+"ARTICLE 4 - Moyens permettant de suivre l'exécution, d'apprécier les "
+"résultats et de valider l'action de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "ARTICLE 5 - Various possible"
+msgstr "ARTICLE 5 - Différents éventuels"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Achievement certificate"
+msgstr "Certificat de réalisation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_needaction
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_needaction
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_needaction
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_exception_decoration
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_exception_decoration
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_exception_decoration
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_state
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_state
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_state
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_type_icon
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_type_icon
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_type_icon
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__admin_contact_id
+msgid "Administrative Contact"
+msgstr "Contact administratif"
+
+#. module: qualiopi
+#: model:res.partner.category,name:qualiopi.administrative_contact_tag
+msgid "Administrative contact"
+msgstr "Contact administratif"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.qualiopi_res_partner
+msgid "Administrative document"
+msgstr "Document administratif"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "After the training"
+msgstr "Après la formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__date_pm
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__start_hours_pm
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_hours_start_pm
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "Afternoon"
+msgstr "Après-midi"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_pm_done
+msgid "Afternoon done ?"
+msgstr "Après-midi effectuée ?"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_pm_expected
+msgid "Afternoon scheduled"
+msgstr "Après-midi prévue"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid ""
+"Allows you to calculate the cost to the company from the cost to the customer. <br/>\n"
+"                                        (Company's cost = customer's cost - X%)"
+msgstr ""
+"Permet de calculer le coût pour l'entreprise à partir du coût pour le client. <br/>\n"
+"                                        (Coût société = coût client - X%)"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__need_analysis
+msgid "Analysis of the need"
+msgstr "Analyse des besoins"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"And (if the training is financed by an OPCO): name - address : "
+"..................................................................................................................................................."
+msgstr ""
+"Et (si la formation est financée par un OPCO): nom - adresse : "
+"..................................................................................................................................................."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "And the beneficiary company"
+msgstr "Et l'entreprise bénéficiaire"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Appreciations"
+msgstr "Appréciations"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Apprenticeship training activity <br/>"
+msgstr "Action de formation par apprentissage <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"Are you considering requesting additional training from our educational team"
+" ? <br/>"
+msgstr ""
+"Envisagez-vous de faire une demande de formation complémentaire à notre "
+"équipe pédagogique ? <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Are you sure you want to continue ?"
+msgstr "Êtes-vous sûr de vouloir continuer ?"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "Article L. 6353-1 and D.6353-1 of the Labor Code"
+msgstr "Article L. 6353-1 et D.6353-1 du Code du travail"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__assigned_to
+msgid "Assigned to"
+msgstr "Assigné à"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"At the end of the training, were you able to assess the contribution of the "
+"training to the daily life of the trainees who the training ? <br/>"
+msgstr ""
+"À l'issue de la formation, avez-vous pu faire le point sur l'apport de la "
+"formation dans le quotidien des stagiaires ayant suivi la formation ? <br/>"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_attachment_count
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_attachment_count
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_attachment_count
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_level_return_attachment
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_level_sending_attachment
+msgid "Attachment QCM of level"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_validation_return_attachment
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_validation_sending_attachment
+msgid "Attachment QCM of validation of acquired knowledge"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__need_analysis_attachment
+msgid "Attachment analysis of the need"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__completed_program_attachment
+msgid "Attachment completed program"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__convocation_attachment
+msgid "Attachment convocation"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__funder_survey_attachment
+msgid "Attachment funder survey"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__half_day_program_attachment
+msgid "Attachment half day program"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__partner_order_attachment
+msgid "Attachment partner order"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__pedagogical_scenario_attachment
+msgid "Attachment pedagogical scenario"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__rules_of_procedure_attachment
+msgid "Attachment rules of procedure"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__signed_quotation_attachment
+msgid "Attachment signed quotation"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainee_evaluations_attachment
+msgid "Attachment trainee evaluations"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainer_evaluation_attachment
+msgid "Attachment trainer evaluation"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_agreement_attachment
+msgid "Attachment training agreement"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_agreement_signed_attachment
+msgid "Attachment training agreement signed"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_certificates_attachment
+msgid "Attachment training certificates"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_evaluations_attachment
+msgid "Attachment training evaluations"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_registration_attachment
+msgid "Attachment training registration forms"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_registration_signed_attachment
+msgid "Attachment training registration forms signed"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_partner__di_attachment_ids
+#: model:ir.model.fields,field_description:qualiopi.field_res_users__di_attachment_ids
+msgid "Attachments"
+msgstr "Fichiers joints"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_background_color
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_background_color_text
+msgid "Background color"
+msgstr "Couleur de fond"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Bad"
+msgstr "Mauvais"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Before the training"
+msgstr "Avant la formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "Between the undersigned :"
+msgstr "Entre les soussignés :"
+
+#. module: qualiopi
+#: model:ir.model.fields.selection,name:qualiopi.selection__di_training_file__invoice_status__status3
+msgid "Billed"
+msgstr "Facturé"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Checked"
+msgstr "Vérifié"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_eval_customer
+msgid "Cold evaluation"
+msgstr "Évaluation à froid"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid "Cold evaluation <br/> of the training"
+msgstr "Évaluation à froid <br/> de la formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__comment
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__comment
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__comment_tracking
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Comment..."
+msgstr "Commentaire..."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Commercial assistant part"
+msgstr "Partie assistante commerciale"
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Company"
+msgstr "Société"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__completed_program
+msgid "Completed program"
+msgstr "Programme complet"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_access_condition
+msgid "Conditions of access"
+msgstr "Conditions d'accès"
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_res_config_settings
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_config_parameter
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "Consult your company."
+msgstr "Consultez votre entreprise."
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__content
+msgid "Content"
+msgstr "Contenu"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_type_form
+msgid "Content of the training..."
+msgstr "Contenu de la formation..."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "Continuing professional development agreement"
+msgstr "Convention de formation professionnelle continue"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__convocation
+msgid "Convocation"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_convocation_training_distance
+msgid "Convocation Training Distance"
+msgstr "Convocation Formation Distanciel"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_convocation_training_on_site
+msgid "Convocation Training On Site"
+msgstr "Convocation Formation Présentiel"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+msgid "Convocation of distance learning"
+msgstr "Convocation formation distanciel"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "Convocation of training"
+msgstr "Convocation formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__create_uid
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__create_uid
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__create_uid
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__create_date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__create_date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__create_date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__customer_id
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_customer
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Customer"
+msgstr "Client"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__customer_cost
+msgid "Customer Cost"
+msgstr "Coût client"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Customer file"
+msgstr "Fichier client"
+
+#. module: qualiopi
+#: model:ir.model.fields.selection,name:qualiopi.selection__di_training_file__place__place1
+msgid "Customer place"
+msgstr "Chez le client"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__date_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_presence
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__name
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_file_date
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Date"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_presence_am
+msgid "Date AM"
+msgstr "Date matin"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_presence_pm
+msgid "Date PM"
+msgstr "Date après-midi"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__partner_order_date
+msgid "Date Partner order"
+msgstr "Date commande"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_level_sending_date
+msgid "Date QCM of level"
+msgstr "Date QCM de niveau"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_level_return_date
+msgid "Date QCM of level - Return"
+msgstr "Date QCM de niveau - Retour"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_validation_sending_date
+msgid "Date QCM of validation of acquired knowledge"
+msgstr "Date QCM de validation des acquis"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_validation_return_date
+msgid "Date QCM of validation of acquired knowledge - Return"
+msgstr "Date QCM de validation des acquis - Retour"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__signed_quotation_date
+msgid "Date Signed Quotation"
+msgstr "Date devis signé"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__need_analysis_date
+msgid "Date analysis"
+msgstr "Date analyse"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__completed_program_date
+msgid "Date completed program"
+msgstr "Date programme complété"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__convocation_date
+msgid "Date convocation"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__funder_survey_date
+msgid "Date funder survey"
+msgstr "Date enquête financeur"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__pedagogical_scenario_date
+msgid "Date pedagogical scenario"
+msgstr "Date scénario pédagogique"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__half_day_program_date
+msgid "Date program"
+msgstr "Date programme"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__rules_of_procedure_date
+msgid "Date rules of procedure"
+msgstr "Date règlement intérieur"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainee_evaluations_date
+msgid "Date trainee evaluations"
+msgstr "Date evaluations des stagiaires"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainer_evaluation_date
+msgid "Date trainer evaluation"
+msgstr "Date evaluations des formateurs"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_agreement_date
+msgid "Date training agreement"
+msgstr "Date convention de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_agreement_signed_date
+msgid "Date training agreement signed"
+msgstr "Date convention de formation signée"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_certificates_date
+msgid "Date training certificates"
+msgstr "Date attestation de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_evaluations_date
+msgid "Date training evaluations"
+msgstr "Date évaluations de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_registration_date
+msgid "Date training registration forms"
+msgstr "Date émargements de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_registration_signed_date
+msgid "Date training registration forms signed"
+msgstr "Date émargements de formation signés"
+
+#. module: qualiopi
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_training
+msgid "Dates"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "Dear Sir or Madam,"
+msgstr "Madame, Monsieur,"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_declaration_number
+msgid "Declaration number"
+msgstr "Numéro de déclaration"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__partner_id
+msgid "Default Partner"
+msgstr "Société formatrice par défaut"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_type_form
+msgid "Default Partner company"
+msgstr "Société formatrice par défaut"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid "Define the default training company"
+msgstr "Définir la société formatrice par défaut"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__deposit
+msgid "Deposit"
+msgstr "Acompte"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"Describe in a few words what this training has brought to your company ? "
+"<br/>"
+msgstr ""
+"Décrivez, en quelques mots, ce que cette formation a apporté à votre "
+"entreprise ? <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Details"
+msgstr "Détails"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_hours_end_am
+msgid "Di Hours End Am"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_hours_end_pm
+msgid "Di Hours End Pm"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__display_name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__display_name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__display_name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"Do you think your company is more successful as a result of this training ? "
+"<br/>"
+msgstr ""
+"Pensez-vous que votre entreprise est plus performante suite à cette "
+"formation ? <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Document Tracking"
+msgstr "Suivi de document"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"Does the training chosen allow the trainees to use the software correctly ? "
+"<br/>"
+msgstr ""
+"La formation choisie permet-elle aux stagiaires ayant suivi la formation "
+"d'utiliser le logiciel correctement ? <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "Done in triplicate in"
+msgstr "Fait en triple exemplaire à"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Duration of the training"
+msgstr "Durée de la formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "Each participant must respect and refer to the internal rules of the"
+msgstr ""
+"Chaque stagiaire devra respecter et se référer au règlement intérieur de"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__end_hours_am
+msgid "End Hours Am"
+msgstr "Heure de fin matin"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__end_hours_pm
+msgid "End Hours Pm"
+msgstr "Heure de fin après-midi"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__end_date
+msgid "End date"
+msgstr "Date de fin"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__error_comment
+msgid "Error"
+msgstr "Erreur"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__error_mess
+msgid "Error Mess"
+msgstr "Message d'erreur"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Evaluation of the training <br/> by the trainer"
+msgstr "Évaluation de la formation <br/> par le formateur"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_eval_participant
+msgid "Evaluation participant"
+msgstr "Évaluation stagiaire"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_eval_trainer
+msgid "Evaluation trainer"
+msgstr "Évaluation formateur"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Feedback"
+msgstr "Retour"
+
+#. module: qualiopi
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_file_files
+msgid "Files"
+msgstr "Dossiers"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_follower_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_follower_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_follower_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_partner_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_partner_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_partner_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__activity_type_icon
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__activity_type_icon
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__activity_type_icon
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_font_color
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_font_color_text
+msgid "Font color"
+msgstr "Couleur de police"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_footer
+#: model_terms:ir.ui.view,arch_db:qualiopi.qualiopi_res_company
+msgid "Footer"
+msgstr "Pied de page"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "For"
+msgstr "Pour"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid ""
+"For any question, you can contact your trainer or the training department :"
+msgstr ""
+"Pour toute question, vous pouvez contacter votre consultant formateur ou le "
+"service formation :"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__funder_survey
+msgid "Funder survey"
+msgstr "Enquête financeur"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "General appreciation"
+msgstr "Appréciation générale"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_goal
+msgid "Goal"
+msgstr "Objectif"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Good"
+msgstr "Bien"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "H.T."
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"H.T. <br/>\n"
+"                        <span style=\"font-weight:bold\">Amounts paid by the company as advance payments (if any) :</span>"
+msgstr ""
+"H.T. <br/>\n"
+"                        <span style=\"font-weight:bold\">Sommes versées par l'entreprise à titre d'acomptes (éventuelles) :</span>"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__half_day_program
+msgid "Half day program"
+msgstr "Programme par demi-journée"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__has_message
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__has_message
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__has_message
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid ""
+"Have you identified any needs among the trainees or the company in terms of "
+"training, either in the continuity of this one or on another subject ? <br/>"
+msgstr ""
+"Avez-vous repéré des besoins auprès des stagiaires ou de l'entreprises en "
+"termes de formation, soit dans la continuité de celle-ci, soit sur un autre "
+"sujet ? <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Highlights of the course"
+msgstr "Points forts du stage"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Homogeneity of expectations of trainees"
+msgstr "Homogénéité des attentes des stagiaires"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Homogeneity of level of the trainees"
+msgstr "Homogénéité du niveau des stagiaires"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Hot evaluation <br/> participant"
+msgstr "Évaluation à chaud <br/> stagiaire"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__id
+msgid "ID"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_exception_icon
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_exception_icon
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_exception_icon
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__activity_exception_icon
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__activity_exception_icon
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__activity_exception_icon
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"If a dispute or a difference cannot be settled amicably, the court of La Roche-sur-Yon will be the only one competent to settle the dispute.<br/>\n"
+"                        The present signed agreement implies acceptance of the general sales conditions (mentioned in article 3) and the internal regulations"
+msgstr ""
+"Si une contestation ou un différend ne peuvent être réglés à l'amiable, le tribunal de La Roche-sur-Yon sera seul compétent pour régler le litige<br/>\n"
+"                        La présente convention signée vaut pour acceptation des conditions générales de vente (citées en article 3) et du règlement intérieur"
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__message_needaction
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__message_unread
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__message_needaction
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__message_unread
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__message_needaction
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__message_unread
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__message_needaction
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__message_has_error
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__message_has_error
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__message_has_error
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"In order to evaluate your level of satisfaction with the training your employees have received, please take a few minutes to complete this to answer this questionnaire. \n"
+"                        Your opinion will allow us to improve the quality of our services by taking into account your expectations."
+msgstr ""
+"Afin d'évaluer votre degré de satisfaction sur la formation suivie par vos collaborateurs, merci de prendre quelques minutes pour répondre à ce questionnaire. \n"
+"                        Votre opinion nous permettra d'améliorer la qualité de nos prestations en tenant compte de vos attentes."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"In return for this training, the employer will pay the following costs :"
+msgstr ""
+"En contrepartie de cette action de formation, l'employeur s'acquittera des "
+"coûts suivants :"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid "In your opinion, was the objective of the training achieved ? <br/>"
+msgstr "D'après-vous, l'objectif de la formation a-t'il été atteint ? <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_type_form
+msgid "Internal Name"
+msgstr "Nom interne"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_partner__di_internal_company
+#: model:ir.model.fields,field_description:qualiopi.field_res_users__di_internal_company
+msgid "Internal company"
+msgstr "Société interne"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__internal_name
+msgid "Internal name"
+msgstr "Nom interne"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__invoice_status
+msgid "Invoice status"
+msgstr "Statut de facturation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_is_follower
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_is_follower
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_is_follower
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date____last_update
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file____last_update
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence____last_update
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__write_uid
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__write_uid
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__write_uid
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__write_date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__write_date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__write_date
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__last_training_date
+msgid "Last training date"
+msgstr "Dernière date de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "Logo"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_main_attachment_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_main_attachment_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_main_attachment_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_file
+msgid "Main Data"
+msgstr "Données principales"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Mediocre"
+msgstr "Médiocre"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Medium"
+msgstr "Moyen"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_has_error
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_has_error
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_has_error
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Modification of the program &amp; teaching methods initially planned"
+msgstr ""
+"Modification du programme &amp; des méthodes pédagogiques prévues "
+"initialement"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__date_am
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__start_hours_am
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_hours_start_am
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "Morning"
+msgstr "Matin"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_am_done
+msgid "Morning done ?"
+msgstr "Matinée effectuée ?"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__date_am_expected
+msgid "Morning scheduled"
+msgstr "Matinée prévue"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Ms./Mr."
+msgstr "Mme/M."
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__my_activity_date_deadline
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__my_activity_date_deadline
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__my_activity_date_deadline
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__name
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_type_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Nature of the training action : <br/>"
+msgstr "Nature de l'action de formation : <br/>"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_calendar_event_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_calendar_event_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_calendar_event_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_date_deadline
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_date_deadline
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_date_deadline
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_summary
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_summary
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_summary
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_type_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_type_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_type_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid "No"
+msgstr "Non"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"No\n"
+"                            <br/> If not, why :"
+msgstr ""
+"Non\n"
+"                            <br/> Si non, pourquoi :"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid ""
+"No\n"
+"                            <br/> If yes, which one ?"
+msgstr ""
+"Non\n"
+"                            <br/> Si oui, laquelle ?"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "No checked"
+msgstr "Non vérifié"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_needaction_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_needaction_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_needaction_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__number_days
+msgid "Number of days"
+msgstr "Nombre de jours"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_has_error_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_has_error_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_has_error_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__number_hours
+msgid "Number of hours"
+msgstr "Nombre d'heures"
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__message_needaction_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__message_needaction_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__message_needaction_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__message_has_error_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__message_has_error_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__message_has_error_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__participant_number
+msgid "Number of participant"
+msgstr "Nombre de participants"
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__message_unread_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__message_unread_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__message_unread_counter
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__quotation_id
+msgid "N° Quotation"
+msgstr "Devis n°"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sale_order_id
+msgid "N° Sale Order"
+msgstr "Bon de commande n°"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Objectives of the achieved"
+msgstr "Objectifs de la formation atteints"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__end_hours_pm
+msgid "PM end"
+msgstr "Fin après-midi"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__start_hours_pm
+msgid "PM start"
+msgstr "Début après-midi"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__participant_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__participant_name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__participant_presence_id
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Participants"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__partner_id
+msgid "Partner"
+msgstr "Société"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__partner_cost
+msgid "Partner Cost"
+msgstr "Coût société"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Partner company"
+msgstr "Société formatrice"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__partner_order
+msgid "Partner order"
+msgstr "Commande société"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_config_settings__partner_percent
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid "Partner percent"
+msgstr "Pourcentage société"
+
+#. module: qualiopi
+#: model:ir.model.fields.selection,name:qualiopi.selection__di_training_file__place__place2
+msgid "Partner place"
+msgstr "À la société"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__partner_sale_order
+msgid "Partner sale order"
+msgstr "BC société"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__pedagogical_scenario
+msgid "Pedagogical scenario"
+msgstr "Scénario pédagogique"
+
+#. module: qualiopi
+#: model:ir.model.fields.selection,name:qualiopi.selection__di_training_file__invoice_status__status2
+msgid "Pending"
+msgstr "En attente"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Period"
+msgstr "Période"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__place
+msgid "Place"
+msgstr "Lieu"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__place_name
+msgid "Place Name"
+msgstr "Nom du lieu"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Place..."
+msgstr "Lieu..."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Possibility of professional application"
+msgstr "Possibilité d'application professionnelle"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_prefecture
+msgid "Prefecture"
+msgstr "Préfecture"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Premises and equipment made available"
+msgstr "Locaux et matériel mis à disposition"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__presence_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__presence_ids
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_file_presence
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Presence"
+msgstr "Présence"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__purchase_sale_order
+msgid "Purchase sale order"
+msgstr "BC Achats"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_level_return
+msgid "QCM of level - Return"
+msgstr "QCM de niveau - Retour"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_level_sending
+msgid "QCM of level - Sending"
+msgstr "QCM de niveau - Envoi"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_validation_return
+msgid "QCM of validation of acquired knowledge - Return"
+msgstr "QCM de validation des acquis - Retour"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__qcm_validation_sending
+msgid "QCM of validation of acquired knowledge - Sending"
+msgstr "QCM de validation des acquis - Envoi"
+
+#. module: qualiopi
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid "Qualiopi"
+msgstr ""
+
+#. module: qualiopi
+#: model:res.groups,name:qualiopi.group_qualiopi_admin
+msgid "Admin"
+msgstr "Admin"
+
+#. module: qualiopi
+#: model:res.groups,name:qualiopi.group_qualiopi_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Quality of the animation"
+msgstr "Qualité de l'animation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_representative_id
+msgid "Representative"
+msgstr "Représentant"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__activity_user_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__activity_user_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__activity_user_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__return_evaluation_form
+msgid "Return evaluation form"
+msgstr "Retour feuille d'évaluation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__return_agreement_signed
+msgid "Return of the agreement signed"
+msgstr "Retour feuille d'émargements"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Return of the training document"
+msgstr "Retour des documents de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__return_sign_in_sheet
+msgid "Return sign-in sheet"
+msgstr "Retour feuille d'émargements"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__rules_of_procedure
+msgid "Rules of procedure"
+msgstr "Règlement intérieur"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sale_code
+msgid "Sale Code"
+msgstr "Code de vente"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_sanitary_condition
+msgid "Sanitary condition"
+msgstr "Conditions sanitaires"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_cold_evaluation
+msgid "Sending cold evaluation"
+msgstr "Envoi évaluation à froid"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_convention_programm
+msgid "Sending convention and programm"
+msgstr "Envoi convention et programme"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_convocation_email
+msgid "Sending of the convocation by email"
+msgstr "Envoi convocation par email"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_training_certificate
+msgid "Sending of the training certificate"
+msgstr "Envoi attestations de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Sending of the training document"
+msgstr "Envoi des documents de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_remote_convocation_email
+msgid "Sending remote convocation by email"
+msgstr "Envoi de la convocation distanciel par e-mail"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_satisfaction_survey
+msgid "Sending satisfaction survey"
+msgstr "Envoi enquête de satisfaction"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__sending_training_document_email
+msgid "Sending training document by email"
+msgstr "Envoi documents de formation par e-mail"
+
+#. module: qualiopi
+#: model:ir.actions.act_window,name:qualiopi.qualiopi_action_config_settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+msgid "Sign-in sheet"
+msgstr "Feuille d'émargement"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_signature
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "Signature"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__signed_quotation
+msgid "Signed quotation"
+msgstr "Devis signé"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_partner__di_siret
+#: model:ir.model.fields,field_description:qualiopi.field_res_users__di_siret
+msgid "Siret"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Skills assessment <br/>"
+msgstr "Bilan de compétences <br/>"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__start_date
+msgid "Start date"
+msgstr "Date de début"
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__activity_state
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__activity_state
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__activity_state
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__subrogation_opco
+msgid "Subrogation OPCO ?"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "The content of the training"
+msgstr "Le contenu de la formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "The continuing professional education organization :"
+msgstr "L'organisme de Formation Professionnelle Continue :"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"The following agreement has been concluded, in application of the provisions"
+" of Book III of the Sixth Part of the Labour Code concerning the "
+"organization of continuing vocational training."
+msgstr ""
+"Est conclue la convention suivante, en application des dispositions du livre"
+" III de la Sixième partie du Code du Travail portant sur l'organisation de "
+"la formation professionnelle continue."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "The material and teaching tools (exercises - support)"
+msgstr "Le matériel et outils pédagogiques (exercices - support)"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "The pedagogical approach"
+msgstr "La démarche pédagogique"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"The present agreement takes effect as of its signature by the company for the duration referred to in article 1.<br/>\n"
+"                        It is the company's responsability to apply for reimbursement from its OPCO and to send us a copy of the prior agreement so that we can issue the invoice to the paying organization.<br/>\n"
+"                        In the absence of the latter's agreement, the company remains liable for the invoice.<br/>\n"
+"                        Invoices are payable in"
+msgstr ""
+"La présente convention prend effet à compter de sa signature par l'entreprise pour la durée visée à l'article 1.<br/>\n"
+"                        Il appartient à l'entreprise de faire une demande de prise en charge auprès de son OPCO et de nous faire parvenir une copie de l'accord préalable afin que nous puissions établir la facture à l'organisme payeur.<br/>\n"
+"                        En l'absence de prise en charge de ce dernier, l'entreprise demeure redevable de la facture.<br/>\n"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "The training organisation"
+msgstr "L'organisme de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid "These values are default values for Qualiopi"
+msgstr "Ces valeurs sont des valeurs par défaut pour Qualiopi"
+
+#. module: qualiopi
+#: model:ir.model.fields.selection,name:qualiopi.selection__di_training_file__invoice_status__status1
+msgid "To be invoiced"
+msgstr "À facturer"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainee_evaluations
+msgid "Trainee evaluations"
+msgstr "Évaluation stagiaire"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__trainer_day_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__trainer_day_name
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_trainer
+#: model:res.partner.category,name:qualiopi.trainer_tag
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Trainer"
+msgstr "Formateur"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainer_evaluation
+msgid "Trainer evaluation"
+msgstr "Évaluation formateur"
+
+#. module: qualiopi
+#: model:ir.actions.act_window,name:qualiopi.action_trainers
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainer_id_name
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__trainer_ids
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+msgid "Trainers"
+msgstr "Formateurs"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_type_id
+#: model:ir.ui.menu,name:qualiopi.menu_qualiopi_training_type
+#: model_terms:ir.ui.view,arch_db:qualiopi.qualiopi_res_company
+msgid "Training"
+msgstr "Formation"
+
+#. module: qualiopi
+#: model:ir.actions.act_window,name:qualiopi.action_di_training_date
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_calendar
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_pivot
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_tree
+msgid "Training Date"
+msgstr "Date de formation"
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_di_training_file
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__training_file_id
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__training_file_id
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_file_tree
+msgid "Training File"
+msgstr "Dossier de formation"
+
+#. module: qualiopi
+#: model:ir.actions.act_window,name:qualiopi.action_di_training_presence
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_presence_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_presence_tree
+msgid "Training Presence"
+msgstr "Présence formation"
+
+#. module: qualiopi
+#: model:ir.actions.act_window,name:qualiopi.action_di_training_type
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_type_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_type_tree
+msgid "Training Type"
+msgstr "Type formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Training activity <br/>"
+msgstr "Action de formation <br/>"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_training_agreement
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_agreement
+msgid "Training agreement"
+msgstr "Convention de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_agreement_signed
+msgid "Training agreement signed"
+msgstr "Convention de formation signée"
+
+#. module: qualiopi
+#: model:ir.actions.report,name:qualiopi.action_report_training_certificate
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "Training certificate"
+msgstr "Attestation de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_certificates
+msgid "Training certificates"
+msgstr "Attestations de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_company_id
+#: model:ir.model.fields,field_description:qualiopi.field_res_config_settings__training_company_id
+#: model_terms:ir.ui.view,arch_db:qualiopi.res_config_settings_qualiopi_form
+msgid "Training company"
+msgstr "Société formatrice"
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_di_training_date
+msgid "Training date"
+msgstr "Date de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "Training dates"
+msgstr "Dates de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_evaluations
+msgid "Training evaluations - Trainer and trainee"
+msgstr "Évaluations de formation - Form. et Stag."
+
+#. module: qualiopi
+#: model:ir.actions.act_window,name:qualiopi.action_di_training_file
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_date_form
+#: model_terms:ir.ui.view,arch_db:qualiopi.di_training_presence_form
+msgid "Training file"
+msgstr "Dossier de formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.qualiopi_res_company
+msgid "Training hours"
+msgstr "Horaires de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_res_company__di_training_manager_id
+msgid "Training manager"
+msgstr "Responsable de la formation"
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_di_training_presence
+msgid "Training presence"
+msgstr "Présence en formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_registration
+msgid "Training registration forms"
+msgstr "Émargement de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__training_registration_signed
+msgid "Training registration forms signed"
+msgstr "Émargement de formation signée"
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__activity_exception_decoration
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__activity_exception_decoration
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__activity_exception_decoration
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model,name:qualiopi.model_di_training_type
+msgid "Type of training"
+msgstr "Type de formation"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_unread
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_unread
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_unread
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__message_unread_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__message_unread_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__message_unread_counter
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "VAE action <br/>"
+msgstr "Action de VAE <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Very Good"
+msgstr "Très bien"
+
+#. module: qualiopi
+#: model:ir.model.fields.selection,name:qualiopi.selection__di_training_file__place__place3
+msgid "Video-conference"
+msgstr "Vidéo-conférence"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "We are pleased to invite you to the"
+msgstr "Nous avons le plaisir de vous convier à la formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+msgid "Weaknesses of the course"
+msgstr "Points faibles du stage"
+
+#. module: qualiopi
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_date__website_message_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_file__website_message_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_presence__website_message_ids
+#: model:ir.model.fields,field_description:qualiopi.field_di_training_type__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: qualiopi
+#: model:ir.model.fields,help:qualiopi.field_di_training_date__website_message_ids
+#: model:ir.model.fields,help:qualiopi.field_di_training_file__website_message_ids
+#: model:ir.model.fields,help:qualiopi.field_di_training_presence__website_message_ids
+#: model:ir.model.fields,help:qualiopi.field_di_training_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "Wich took place from <br/>"
+msgstr "Qui s'est déroulée <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid ""
+"Wishing you an excellent training, <br/> Sincerely, <br/> The training "
+"department"
+msgstr ""
+"En vous souhaitant une excellente formation, <br/> Cordialement, <br/> Le "
+"Service Formation"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid ""
+"Without prejudice to the time limits imposed by tax, accounting or commercial rules, I undertake to keep all the supporting documents that have made it possible to draw up \n"
+"                            this documents that made it possible to draw up this certificate for a period of 3 years from the end of the year of the last payment. \n"
+"                            In the case of co-financing from European funds, the retention period is extended in accordance with the specific specific contractual obligations."
+msgstr ""
+"Sans préjudice des délais imposés par les règles fiscales, comptables ou commerciales, je m'engage à conserver l'ensemble des \n"
+"                            pièces justificatives qui ont permis d'établir le présent certificat pendant une durée de 3 ans à compter de la fin de l'année du dernier paiement. \n"
+"                            En cas de cofinancement des fonds européens, la durée de conservation est étendue conformément aux obligations conventionnelles spécifiques"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.qualiopi_res_company
+msgid "Write a footer..."
+msgstr "Écrivez un pied de page..."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+msgid "Yes"
+msgstr "Oui"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Yes No"
+msgstr "Oui Non"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "Yes       No <br/>"
+msgstr "Oui       Non <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid ""
+"Your suggestions for the improvement of the training of the module <br/>"
+msgstr ""
+"Vos suggestions pour l'amélioration de la formation ou du module <br/>"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+msgid "at"
+msgstr "à"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "day(s) (or"
+msgstr "jour(s) (soit"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.qualiopi_res_partner
+msgid "e.g. 123 568 941 00056"
+msgstr ""
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "for a total duration of"
+msgstr "pour une durée totale de"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_achievement_certificate
+msgid "hours"
+msgstr "heures"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "hours)"
+msgstr "heures)"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "on"
+msgstr "le"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "on one side,"
+msgstr "d'une part,"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "registered under the activity declaration number"
+msgstr "enregistré sous le numéro de déclaration d'activité"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "represented by"
+msgstr "représenté par"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "to"
+msgstr "à"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_customer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_participant
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_eval_trainer
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_sign_in_sheet
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "to"
+msgstr "au"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_certificate
+msgid "to the Prefect of"
+msgstr "à la Préfecture de"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid ""
+"training organization<br/>\n"
+"                        Each participant will have to sign the sign-in sheet for each half day.<br/>\n"
+"                        Each participant will be evaluated by means of a questionnaire of the acquired knowledge in connection with the topics approached during the training.<br/>\n"
+"                        Each participant will evaluate the quality of the training by means of a hot (at the end of the training) and a cold (in the weeks that follow) evaluations."
+msgstr ""
+"l'organisme de formation<br/>\n"
+"                        Chaque stagiaire devra signer par demi-journée les feuilles de présence.<br/>\n"
+"                        Chaque stagiaire sera évalué par le biais d'un questionnaire des acquis en lien avec les thèmes abordés durant la formation.<br/>\n"
+"                        Chaque stagiaire évaluera la qualité de la formation par le biais d'évaluation à chaud (à la fin de la formation) et à froid (dans les semaines qui suivent)."
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_distance
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_convocation_training_on_site
+msgid "training which will take place :"
+msgstr "qui se déroulera"
+
+#. module: qualiopi
+#: model_terms:ir.ui.view,arch_db:qualiopi.report_training_agreement
+msgid "with the prefect of the"
+msgstr "auprès du Préfet de la"

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_qualiopi_form" model="ir.ui.view">
+        <field name="name">Config Settings for Qualiopi</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Qualiopi" string="Qualiopi" data-key="qualiopi" >
+                    <h2>Qualiopi</h2>
+                    <div class="row mt16 o_settings_container" name="qualiopi_settings_container_partner_percent">
+                        <div class="col-12 col-lg-6 o_setting_box" title="These values are default values for Qualiopi" name="qualiopi_settings_panel">
+                            <div class="o_setting_left_pane">
+                            </div>        
+                                                
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Partner percent</span>
+                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/>
+                                <div class="content-group">
+                                    <div class="text-muted">
+                                        Allows you to calculate the cost to the company from the cost to the customer. <br/>
+                                        (Company's cost = customer's cost - X%)
+                                    </div>
+                                    <div class="row mt16">
+                                        <label string="Partner percent" for="partner_percent" class="col-lg-5 o_light_label"/>
+                                        <field name="partner_percent"/> %%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container" name="qualiopi_settings_container_training_company_id">
+                        <div class="col-12 col-lg-6 o_setting_box" title="These values are default values for Qualiopi" name="qualiopi_settings_panel">
+                            <div class="o_setting_left_pane">
+                            </div>                            
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Training company</span>
+                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/>
+                                <div class="content-group">
+                                    <div class="text-muted">
+                                        Define the default training company
+                                    </div>
+                                    <div class="row mt16">
+                                        <label string="Training company" for="training_company_id" class="col-lg-5 o_light_label"/>
+                                        <field name="training_company_id"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record> 
+  
+    <record id="qualiopi_action_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_qualiopi_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'Qualiopi'}</field>
+    </record>      
+</odoo>

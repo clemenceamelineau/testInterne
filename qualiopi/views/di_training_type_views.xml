@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="di_training_type_tree" model="ir.ui.view">
+        <field name="name">di.training.type.tree</field>
+        <field name="model">di.training.type</field>        
+        <field name="arch" type="xml">
+            <tree string="Training Type" import="true" create="true">
+                <field name="name"/>
+                <field name="partner_id"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="di_training_type_kanban" model="ir.ui.view">
+        <field name="name">di.training.type.kanban</field>
+        <field name="model">di.training.type</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-10">
+                                    <field name="name"/>
+                                    <br/>
+                                    <field name="partner_id"/>
+                                </div>
+                            </div>  
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+    <record id="di_training_type_form" model="ir.ui.view">
+        <field name="name">di.training.type.form</field>
+        <field name="model">di.training.type</field>
+        <field name="arch" type="xml">
+            <form string="Training Type">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" placeholder="Name"/>
+                        </group>
+                        <group>
+                            <field name="internal_name" placeholder="Internal Name"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="partner_id" placeholder="Default Partner company"/>
+                        <field name="content" placeholder="Content of the training..."/>
+                    </group>
+                </sheet>  
+                <div class="oe_chatter">  
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>                   
+            </form>
+        </field>
+    </record>
+    
+
+    <record id="action_di_training_type" model="ir.actions.act_window">
+        <field name="name">Training Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.training.type</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+</odoo>

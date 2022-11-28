@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <template id="change_div_name" name="change_name" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="attributes">
+            <attribute name="id">div_portal</attribute>
+        </xpath>
+    </template>
+    
+    <template id="univerp_portal_my_home" name="Show Menu" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[@id='div_portal']" position="replace">
+            <!-- Ajout bouton redirection vers tickets -->
+            <a id="docs_entry_ticket" role="button"  href="/my/tickets?filterby=open" style="width: 539px;"  class="btn btn-primary btn-block">
+            <i class="fa fa-ticket"/> Tickets</a>
+            
+            <!-- CLAM 20/10/2022 - Rend la div invisible -->
+            <div id='div_portal' class="o_portal_docs list-group" style="visibility: hidden">
+            </div>
+        </xpath>
+    </template>  
+</odoo>

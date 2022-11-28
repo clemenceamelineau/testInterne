@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="minimal_layout">
+        &lt;!DOCTYPE html&gt;
+        <html style="height: 0;">
+            <head>
+                <base t-att-href="base_url"/>
+                <t t-call-assets="web.report_assets_pdf" t-js="false"/>
+                <t t-call-assets="web.report_assets_common" t-js="false"/>
+                <t t-call-assets="web.report_assets_pdf" t-css="false"/>
+                <meta charset="utf-8"/>
+                <script t-if="subst">
+                    function subst() {
+                        var vars = {};
+                        var x = document.location.search.substring(1).split('&amp;');
+                        for (var i in x) {
+                            var z = x[i].split('=', 2);
+                            vars[z[0]] = unescape(z[1]);
+                        }
+                        var x = ['sitepage', 'sitepages', 'section', 'subsection', 'subsubsection'];
+                        var z = {'sitepage': 'page', 'sitepages': 'topage'};
+                        for (var i in x) {
+                            var y = document.getElementsByClassName(z[x[i]] || x[i])
+                            for (var j=0; j&lt;y.length; ++j)
+                                y[j].textContent = vars[x[i]];
+                        }
+
+                        var index = vars['webpage'].split('.', 4)[3];
+                        var header = document.getElementById('minimal_layout_report_headers');
+                        if(header){
+                            var companyHeader = header.children[index];
+                            header.textContent = '';
+                            header.appendChild(companyHeader);
+                        }
+                        var footer = document.getElementById('minimal_layout_report_footers');
+                        if(footer){
+                            var companyFooter = footer.children[index];
+                            footer.textContent = '';
+                            footer.appendChild(companyFooter);
+                        }
+                    }
+                </script>
+            </head>
+            <body class="container" t-att-data-report-id="report_xml_id" t-att-onload="subst and 'subst()'" style="overflow:hidden">
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+    <template id="report_achievement_certificate">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="file">  
+                <t t-set="font_color" t-value="file.training_company_id.di_font_color"/>
+                <t t-set="background_color" t-value="file.training_company_id.di_background_color"/>
+                <t t-foreach="file.participant_ids.sorted(key = lambda p: p.name)" t-as="participant">
+                    <div class="header">
+                        <img t-if="file.training_company_id.logo" t-att-src="image_data_uri(file.training_company_id.logo)" style="max-width:100pt;max-height:75pt" alt="Logo"/>
+                        <p/>
+                    </div>
+                    <h2 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">Achievement certificate</h2>
+                    
+                    <div class="page">
+                        <p>
+                            <span style="font-weight:bold">I, the undersigned, </span> <span t-field="file.training_company_id.di_representative_id.name"/> <br/>
+                            <span style="font-weight:bold">legal representative of the training provider : </span><span t-field="file.training_company_id.name"/> <br/>
+                            <span style="font-weight:bold">certifies that :</span>
+                        </p>
+                        <p> Ms./Mr.<span t-field="participant.name"/><br/>
+                            employee of the company <span style="font-weight:bold" t-field="file.customer_id.name"/> - <span t-field="file.customer_id.street"/> - 
+                            <span t-field="file.customer_id.zip"/> <span t-field="file.customer_id.city"/><br/>
+                            followed the training action <span t-field="file.training_type_id.name"/>
+                        </p>
+                        <p>
+                            Nature of the training action : <br/>
+                            <img src="/qualiopi/static/description/case_checked.png" style="max-width:20pt;max-height:20pt;" alt="Checked"/> Training activity <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="No checked"/> Skills assessment <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="No checked"/> VAE action <br/>
+                            <img src="/qualiopi/static/description/case.png" style="max-width:20pt;max-height:20pt;" alt="No checked"/> Apprenticeship training activity <br/>
+                        </p>
+                        <p>
+                            Wich took place from <br/>
+                            
+                            
+                            <t t-set="am" t-value="file.end_hours_am - file.start_hours_am"/>
+                            <t t-set="pm" t-value="file.end_hours_pm - file.start_hours_pm"/>
+                            <t t-set="h" t-value="0"/>
+                            <t t-foreach="file.date_ids" t-as="date">
+                                <span style="font-weight:bold" t-field="date.name"/>
+                                <!-- Calcul nombre de jours et d'heures -->
+                                <t t-if="date.date_am == True">
+                                    <t t-set="h" t-value="h+am"/>
+                                    Morning 
+                                </t>
+                                <t t-if="date.date_pm == True">
+                                    <t t-set="h" t-value="h+pm"/>
+                                    Afternoon
+                                </t>
+                                <br/>
+                            </t>   
+                        </p>
+                        <p>for a total duration of <span style="font-weight:bold" t-esc="h"/> hours</p>
+                        <p>
+                            Without prejudice to the time limits imposed by tax, accounting or commercial rules, I undertake to keep all the supporting documents that have made it possible to draw up 
+                            this documents that made it possible to draw up this certificate for a period of 3 years from the end of the year of the last payment. 
+                            In the case of co-financing from European funds, the retention period is extended in accordance with the specific specific contractual obligations.
+                        </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <p><span style="font-weight:bold">Dated at :</span> <span t-field="file.training_company_id.city"/></p>
+                                <p><span style="font-weight:bold">On :</span> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></p>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p><span style="font-weight:bold">Signature and stamp of the company :</span></p>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(file.training_company_id.di_signature)" style="width:200pt;height:70pt" alt="Signature"/>
+                            </div>
+                        </div>   
+                    </div>
+                              
+                    <div class="footer">
+                        <h6 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">
+                            <span t-field="file.training_company_id.di_footer"/>
+                        </h6>
+                    </div>
+                    <p style="page-break-after:always;"></p>
+                </t>
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>

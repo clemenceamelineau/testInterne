@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="trainer_tag" model="res.partner.category">
+            <field name="name">Trainer</field>
+            <field name="color">11</field>
+        </record>
+        <record id="administrative_contact_tag" model="res.partner.category">
+            <field name="name">Administrative contact</field>
+            <field name="color">4</field>
+        </record>
+        
+        <!-- Ajout de la catégorie parente 'Interne' -->
+        <record model="ir.module.category" id="module_category_internal">
+            <field name="name">Internal</field>
+            <field name="sequence">10</field>
+        </record>
+        
+        <!-- Ajout de la catégorie pour les droits Qualiopi -->
+        <record model="ir.module.category" id="module_category_internal_qualiopi">
+            <field name="name">Qualiopi</field>
+            <field name="description">Qualiopi access</field>
+            <field name="parent_id" ref="module_category_internal"/>
+            <field name="sequence">14</field>
+        </record>
+    </data>
+</odoo>

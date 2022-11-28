@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem id="menu_qualiopi" name="Qualiopi" sequence="1" web_icon="qualiopi,static/description/qualiopiicon.png"/> 
+    
+        <menuitem id="menu_qualiopi_file" name="Main Data" sequence="1" parent="menu_qualiopi"/>
+            <menuitem id="menu_qualiopi_file_files" name="Files" sequence="1" parent="menu_qualiopi_file" action="action_di_training_file"/>
+            <menuitem id="menu_qualiopi_training_type" name="Training" sequence="2" parent="menu_qualiopi_file" action="action_di_training_type"/>
+            <menuitem id="menu_qualiopi_trainer" name="Trainer" sequence="3" parent="menu_qualiopi_file" action="action_trainers"/>
+            <menuitem id="menu_qualiopi_customer" name="Customer" sequence="4" parent="menu_qualiopi_file" action="contacts.action_contacts"/>
+            
+        
+        <menuitem id="menu_qualiopi_training" name="Dates" sequence="2" parent="menu_qualiopi"/>
+            <menuitem id="menu_qualiopi_file_date" name="Date" sequence="1" parent="menu_qualiopi_training" action="action_di_training_date"/>
+            <menuitem id="menu_qualiopi_file_presence" name="Presence" sequence="2" parent="menu_qualiopi_training" action="action_di_training_presence"/>
+            
+        <menuitem id="menu_qualiopi_config_parameter" name="Config Settings" sequence="10" parent="menu_qualiopi"  action="qualiopi_action_config_settings" />
+</odoo>

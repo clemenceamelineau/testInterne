@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="di_training_file_tree" model="ir.ui.view">
+        <field name="name">di.training.file.tree</field>
+        <field name="model">di.training.file</field>        
+        <field name="arch" type="xml">
+            <tree string="Training File" import="true" create="true">
+                <field name="name"/>
+                <field name="training_type_id" optional="show"/>
+                <field name="partner_id" optional="show"/>
+                <field name="customer_id" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="di_training_file_kanban" model="ir.ui.view">
+        <field name="name">di.training.file.kanban</field>
+        <field name="model">di.training.file</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <field name="name"/><br/>
+                            <field name="customer_id"/><br/>
+                            <field name="training_type_id"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+    <record id="di_training_file_form" model="ir.ui.view">
+        <field name="name">di.training.file.form</field>
+        <field name="model">di.training.file</field>
+        <field name="arch" type="xml">
+            <form string="Training File">
+                <header>
+                    <button name="btn_presence_clic" string="Presence" class="btn btn-secondary" type="object" confirm="Are you sure you want to continue ?"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                        <h3>
+                            <field name="customer_id" placeholder="Customer"/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="training_type_id"/>
+                            <field name="partner_id"  placeholder="Partner company"/>
+                            <field name="place"/>
+                            <field name="place_name" placeholder="Place..." nolabel="1" colspan="2" style="text-align: center"/>
+                        </group>
+                        <group>
+                            <field name="sale_order_id"/>
+                            <field name="quotation_id"/>
+                            <field name="number_days"/>
+                            <field name="number_hours"/>
+                            <field name="assigned_to" widget="many2one_avatar_user" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="date_ids">
+                            <tree string="Date" default_order="date">
+                                <field name="date"/>
+                                <field name="date_am"/>
+                                <field name="start_hours_am" widget="float_time" optional="hide"/>
+                                <field name="end_hours_am" widget="float_time" optional="hide"/>
+                                <field name="date_pm"/>
+                                <field name="start_hours_pm" widget="float_time" optional="hide"/>
+                                <field name="end_hours_pm" widget="float_time" optional="hide"/>
+                                <field name="trainer_day_ids" widget="many2many_tags_avatar" />
+                            </tree>
+                            <form string="Date">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="date" string="Date"/> 
+                                        <field name="date"/>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                            <div>
+                                                <label class="oe_inline" for="date_am" string="Morning"/>
+                                                <field class="oe_inline" name="date_am" widget="boolean_toggle"/>
+                                                
+                                                <field class="oe_inline" nolabel='1' name="start_hours_am" widget="float_time" attrs="{'invisible': [('date_am', '=', False)]}"/>
+                                                <span class="oe_inline" attrs="{'invisible': [('date_am', '=', False)]}"> to </span>
+                                                <field class="oe_inline" nolabel='1' name="end_hours_am" widget="float_time" attrs="{'invisible': [('date_am', '=', False)]}"/>
+                                            </div>
+                                            <div>
+                                                <label class="oe_inline" for="date_am" string="Afternoon"/>
+                                                <field class="oe_inline" name="date_pm" widget="boolean_toggle"/>
+                                                
+                                                <field class="oe_inline" nolabel='1' name="start_hours_pm" widget="float_time" attrs="{'invisible': [('date_pm', '=', False)]}"/>
+                                                <span class="oe_inline" attrs="{'invisible': [('date_pm', '=', False)]}"> to </span>
+                                                <field class="oe_inline" nolabel='1' name="end_hours_pm" widget="float_time" attrs="{'invisible': [('date_pm', '=', False)]}"/>
+                                            </div>
+                                    </div>
+                                </div>
+                                <label for="trainer_day_ids" string="Trainer"/>
+                                <field name="trainer_day_ids" context="{'category_id': 1}">
+                                    <tree string="Trainers">
+                                        <field name="commercial_company_name" string="Company"/>
+                                        <field name="name"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                        <field name="street"/>
+                                        <field name="city" optional="hide"/>
+                                        <field name="country_id" optional="hide"/>
+                                        <field name="category_id" optional="hide"/>
+                                    </tree>
+                                </field>
+                            </form>
+                        </field>   
+                    </group>
+                    <group>
+                        <group>
+                            <field name="trainer_id_name" widget="many2many_tags_avatar">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page name="details" string="Details">
+                            <group string="Commercial assistant part">
+                                <group>
+                                    <field name="currency_id"/>
+                                    <field name="customer_cost"/>
+                                    <field name="partner_cost"/>
+                                    <field name="deposit"/> 
+                                </group>
+                                <group>
+                                    <field name="participant_number"/>
+                                    <field name="sale_code"/>
+                                    <field name="admin_contact_id"/>
+                                    <field name="project_id"/>
+                                    <field name="subrogation_opco" widget="boolean_toggle"/>
+                                </group>
+                            </group>
+                            <group string="Period">
+                                <group>
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                    <field name="last_training_date"/>
+                                </group>
+                                <group col="4">
+                                    <field name="start_hours_am" class="oe_inline" widget="float_time"/>
+                                    <span class="oe_inline"> to </span>
+                                    <field name="end_hours_am" nolabel="1" class="oe_inline" widget="float_time"/>
+                                    
+                                    <field name="start_hours_pm" class="oe_inline" widget="float_time"/>
+                                    <span class="oe_inline"> to </span>
+                                    <field name="end_hours_pm" nolabel="1" class="oe_inline" widget="float_time"/>
+                                </group>
+                            </group>
+                            <group string="Before the training">
+                                <group>
+                                    <field name="partner_sale_order"/>
+                                    <field name="purchase_sale_order"/>
+                                    <field name="sending_convention_programm"/>
+                                    <field name="return_agreement_signed"/>
+                                </group>
+                                <group>
+                                    <field name="sending_training_document_email"/>
+                                    <field name="sending_cold_evaluation"/>
+                                    <field name="sending_remote_convocation_email"/>
+                                    <field name="sending_convocation_email"/>
+                                </group>
+                            </group>
+                            <group string="After the training">
+                                <group>
+                                    <field name="invoice_status"/>
+                                    <field name="return_evaluation_form"/>
+                                    <field name="sending_satisfaction_survey"/>
+                                </group>
+                                <group>
+                                    <field name="return_sign_in_sheet"/>
+                                    <field name="sending_training_certificate"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="document_tracking" string="Document Tracking">
+                            <group string="Customer file" colspan="4" col="5">
+                                <field name="need_analysis"/>
+                                <field name="need_analysis_date" nolabel="1" colspan="1"/>
+                                <field name="need_analysis_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="half_day_program"/>
+                                <field name="half_day_program_date" nolabel="1" colspan="1"/>
+                                <field name="half_day_program_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="signed_quotation"/>
+                                <field name="signed_quotation_date" nolabel="1" colspan="1"/>
+                                <field name="signed_quotation_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="partner_order"/>
+                                <field name="partner_order_date" nolabel="1" colspan="1"/>
+                                <field name="partner_order_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="pedagogical_scenario"/>
+                                <field name="pedagogical_scenario_date" nolabel="1" colspan="1"/>
+                                <field name="pedagogical_scenario_attachment" nolabel="1" colspan="1"/>
+                            </group>
+                            <group string="Sending of the training document"  colspan="4" col="5">
+                                <field name="convocation"/>
+                                <field name="convocation_date" nolabel="1" colspan="1"/>
+                                <field name="convocation_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="training_agreement"/>
+                                <field name="training_agreement_date" nolabel="1" colspan="1"/>
+                                <field name="training_agreement_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="completed_program"/>
+                                <field name="completed_program_date" nolabel="1" colspan="1"/>
+                                <field name="completed_program_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="rules_of_procedure"/>
+                                <field name="rules_of_procedure_date" nolabel="1" colspan="1"/>
+                                <field name="rules_of_procedure_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="qcm_level_sending"/>
+                                <field name="qcm_level_sending_date" nolabel="1" colspan="1"/>
+                                <field name="qcm_level_sending_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="qcm_validation_sending"/>
+                                <field name="qcm_validation_sending_date" nolabel="1" colspan="1"/>
+                                <field name="qcm_validation_sending_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="training_registration"/>
+                                <field name="training_registration_date" nolabel="1" colspan="1"/>
+                                <field name="training_registration_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="training_evaluations"/>
+                                <field name="training_evaluations_date" nolabel="1" colspan="1"/>
+                                <field name="training_evaluations_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="training_certificates"/>
+                                <field name="training_certificates_date" nolabel="1" colspan="1"/>
+                                <field name="training_certificates_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="funder_survey"/>
+                                <field name="funder_survey_date" nolabel="1" colspan="1"/>  
+                                <field name="funder_survey_attachment" nolabel="1" colspan="1"/>                          
+                            </group>
+                            <group string="Return of the training document" colspan="4" col="5">
+                                <field name="training_agreement_signed"/>
+                                <field name="training_agreement_signed_date" nolabel="1" colspan="1"/>
+                                <field name="training_agreement_signed_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="training_registration_signed"/>
+                                <field name="training_registration_signed_date" nolabel="1" colspan="1"/>
+                                <field name="training_registration_signed_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="trainee_evaluations"/>
+                                <field name="trainee_evaluations_date" nolabel="1" colspan="1"/>
+                                <field name="trainee_evaluations_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="trainer_evaluation"/>
+                                <field name="trainer_evaluation_date" nolabel="1" colspan="1"/>
+                                <field name="trainer_evaluation_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="qcm_level_return"/>
+                                <field name="qcm_level_return_date" nolabel="1" colspan="1"/>
+                                <field name="qcm_level_return_attachment" nolabel="1" colspan="1"/>
+                                
+                                <field name="qcm_validation_return"/>
+                                <field name="qcm_validation_return_date" nolabel="1" colspan="1"/> 
+                                <field name="qcm_validation_return_attachment" nolabel="1" colspan="1"/>        
+                            </group>
+                            <group string="Comment">
+                                <field name="comment_tracking" placeholder = "Comment..." nolabel="1" />
+                            </group>
+                        </page>
+                        <page name="trainers" string="Trainers">
+                            <field name="trainer_ids" context="{'category_id': 1}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="email" optional="show"/>
+                                    <field name="phone" optional="show"/>
+                                    <field name="commercial_company_name" string="Company" optional="show"/>
+                                    <field name="city" optional="hide"/>
+                                    <field name="country_id" optional="hide"/>
+                                    <field name="category_id" optional="hide" widget="many2many_tags"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="participants" string="Participants">
+                            <field name="participant_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="parent_name" string="Company" optional="show"/>
+                                    <field name="function" optional="hide"/>
+                                    <field name="mobile" optional="hide"/>
+                                    <field name="phone" optional="show"/>
+                                    <field name="email" optional="show"/>
+                                    <field name="street" optional="hide"/>
+                                    <field name="zip" optional="hide"/>
+                                    <field name="city" optional="hide"/>
+                                    <field name="country_id" optional="hide"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="presence" string="Presence">
+                            <field name="presence_ids">
+                                <tree default_order='date_presence'>
+                                    <field name="date_presence"/>
+                                    <field name="participant_name"/>
+                                    <field name="date_am_expected" optional="show"/>
+                                    <field name="date_pm_expected" optional="show"/>
+                                    <field name="date_am_done" optional="hide"/>
+                                    <field name="date_pm_done" optional="hide"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="participant_name"/> <!-- Modif si ajout depuis le tableau souhaitée -->
+                                        </group>
+                                        <group>
+                                            <field name="date_presence" attrs="{'readonly': True}"/> <!-- Modif si ajout depuis le tableau souhaitée -->
+                                        </group>
+                                    </group>
+                                    <group>
+                                        <field name="date_presence_am" invisible="1"/>
+                                        <field name="date_presence_pm" invisible="1"/>
+                                        <group>
+                                            <field name="date_am_expected" widget="boolean_toggle" attrs="{'invisible': [('date_presence_am', '=', False)]}"/>
+                                            <field name="date_am_done" widget="boolean_toggle" attrs="{'invisible': [('date_am_expected', '=', False)]}"/>
+                                        </group>
+                                        <group>
+                                            <field name="date_pm_expected" widget="boolean_toggle" attrs="{'invisible': [('date_presence_pm', '=', False)]}"/>
+                                            <field name="date_pm_done" widget="boolean_toggle" attrs="{'invisible': [('date_pm_expected', '=', False)]}"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                            <field name="error_comment"/>
+                        </page>
+                        <page name="comment" string="Comment">
+                            <field name="comment" placeholder = "Comment..."/>
+                        </page> 
+                    </notebook> 
+                </sheet>  
+                <div class="oe_chatter">  
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>                   
+            </form>
+
+        </field>
+    </record>
+
+    <record id="action_trainers" model="ir.actions.act_window">
+        <field name="name">Trainers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="context">{'category_id': 1}</field>
+        <field name="domain">[('category_id','=',1)]</field>
+    </record>
+    
+    <record id="qualiopi_trainer_kanban" model="ir.actions.act_window.view">
+        <field name="sequence" eval="0"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="base.res_partner_kanban_view"/>
+        <field name="act_window_id" ref="action_trainers"/>
+    </record>
+    <record id="qualiopi_trainer_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="base.view_partner_tree"/>
+        <field name="act_window_id" ref="action_trainers"/>
+    </record>
+    <record id="qualiopi_trainer_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="base.view_partner_form"/>
+        <field name="act_window_id" ref="action_trainers"/>
+    </record>
+    
+    
+    <record id="action_di_training_file" model="ir.actions.act_window">
+        <field name="name">Training file</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.training.file</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+    
+    <record id="seq_file_name" model="ir.sequence">
+        <field name="name">Training File Name</field>
+        <field name="code">di.training.file</field>
+        <field name="prefix">DO</field>
+        <field name="padding">1</field>
+    </record>
+    
+</odoo>

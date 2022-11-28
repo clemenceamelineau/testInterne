@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="minimal_layout">
+        &lt;!DOCTYPE html&gt;
+        <html style="height: 0;">
+            <head>
+                <base t-att-href="base_url"/>
+                <t t-call-assets="web.report_assets_pdf" t-js="false"/>
+                <t t-call-assets="web.report_assets_common" t-js="false"/>
+                <t t-call-assets="web.report_assets_pdf" t-css="false"/>
+                <meta charset="utf-8"/>
+                <script t-if="subst">
+                    function subst() {
+                        var vars = {};
+                        var x = document.location.search.substring(1).split('&amp;');
+                        for (var i in x) {
+                            var z = x[i].split('=', 2);
+                            vars[z[0]] = unescape(z[1]);
+                        }
+                        var x = ['sitepage', 'sitepages', 'section', 'subsection', 'subsubsection'];
+                        var z = {'sitepage': 'page', 'sitepages': 'topage'};
+                        for (var i in x) {
+                            var y = document.getElementsByClassName(z[x[i]] || x[i])
+                            for (var j=0; j&lt;y.length; ++j)
+                                y[j].textContent = vars[x[i]];
+                        }
+
+                        var index = vars['webpage'].split('.', 4)[3];
+                        var header = document.getElementById('minimal_layout_report_headers');
+                        if(header){
+                            var companyHeader = header.children[index];
+                            header.textContent = '';
+                            header.appendChild(companyHeader);
+                        }
+                        var footer = document.getElementById('minimal_layout_report_footers');
+                        if(footer){
+                            var companyFooter = footer.children[index];
+                            footer.textContent = '';
+                            footer.appendChild(companyFooter);
+                        }
+                    }
+                </script>
+            </head>
+            <body class="container" t-att-data-report-id="report_xml_id" t-att-onload="subst and 'subst()'" style="overflow:hidden">
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+    <template id="report_sign_in_sheet">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="file">
+                <t t-set="font_color" t-value="file.training_company_id.di_font_color"/>
+                <t t-set="background_color" t-value="file.training_company_id.di_background_color"/>
+                <div class="page">
+                    <!-- Calcul nombre de jours et d'heures -->
+                    <t t-set="am" t-value="file.end_hours_am - file.start_hours_am"/>
+                    <t t-set="pm" t-value="file.end_hours_pm - file.start_hours_pm"/>
+                    
+                    <t t-set="d" t-value="0"/>
+                    <t t-set="h" t-value="0"/>
+                    <tr t-foreach="file.date_ids" t-as="date_check">
+                        <t t-if="date_check.date_am == True">
+                        <t t-set="d" t-value="d+0.5"/>
+                            <t t-set="h" t-value="h+am"/>
+                        </t>
+                        <t t-if="date_check.date_pm == True">
+                            <t t-set="d" t-value="d+0.5"/>
+                            <t t-set="h" t-value="h+pm"/>
+                        </t>
+                    </tr>
+                    
+                    <div class="header">
+                        <img t-if="file.training_company_id.logo" t-att-src="image_data_uri(file.training_company_id.logo)" style="max-width:100pt;max-height:75pt" alt="Logo"/>
+                        <p/>
+                    </div>
+                    <h2 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">Sign-in sheet</h2>
+                    <div>
+                        <p><span style="font-weight:bold">Customer :</span> <span t-field="file.customer_id.name"></span><br/>
+                        <span style="font-weight:bold">Place :</span> <span t-field="file.place_name"/><br/>
+                        <span style="font-weight:bold">Period :</span> <span t-field="file.start_date"/> to <span  t-field="file.end_date"/><br/>
+                        <span style="font-weight:bold">Duration of training :</span> <span t-esc="d"/> day(s) (or <span t-esc="h"/> hours)</p>
+                        <br/>
+    
+                        <p style="text-align:center"><span style="font-weight:bold">Training</span> - <span t-field="file.training_type_id.name"/></p>    
+                        <table class="table table-bordered">
+                            <tr>
+                                <td style="text-align:center"><span style="text-align:center;font-weight:bold">Name</span></td>
+                                <t t-foreach="file.date_ids" t-as="date">
+                                    <td colspan="2" style="text-align:center"><span style="text-align:center;font-weight:bold" t-field="date.name"></span></td>
+                                </t>
+                            </tr>
+                            <t t-foreach="file.participant_ids.sorted(key = lambda p: p.name)" t-as="participant">
+                                <tr>
+                                    <td style="width:20%">
+                                        <span t-field="participant.name"/>
+                                    </td>
+                                    <t t-foreach="file.date_ids" t-as="date">
+                                        <td><span></span></td>
+                                        <td><span></span></td>
+                                    </t>
+                                </tr>                        
+                            </t>
+                            <t t-foreach="file.trainer_ids" t-as="trainer">
+                                <tr>
+                                    <td style="width:20%">
+                                        <span t-field="trainer.name"/>
+                                    </td>
+                                    <t t-foreach="file.date_ids" t-as="date">
+                                        <td><span></span></td>
+                                        <td><span></span></td>
+                                    </t>
+                                </tr> 
+                            </t>
+                        </table>
+                        <div class="row">
+                            <div class="col-6">
+                                <p><span style="font-weight:bold">Dated at :</span> <span t-field="file.training_company_id.city"/></p>
+                                <p><span style="font-weight:bold">On :</span> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></p>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p><span style="font-weight:bold">Signature and stamp of the company :</span></p>
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(file.training_company_id.di_signature)" style="width:200pt;height:70pt" alt="Signature"/>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    <div class="footer">
+                        <h6 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">
+                            <span t-field="file.training_company_id.di_footer"/>
+                        </h6>
+                    </div>
+                    <p style="page-break-after:always;">  </p>
+                </div>    
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>

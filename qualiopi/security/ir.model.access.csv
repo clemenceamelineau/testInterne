@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_admin_training_file,training_file_group_admin,model_di_training_file,qualiopi.group_qualiopi_admin,1,1,1,1
+access_user_training_file,training_file_group_user,model_di_training_file,qualiopi.group_qualiopi_user,1,1,1,1
+access_portal_training_file,training_file_group_user,model_di_training_file,base.group_portal,1,1,1,1
+
+access_admin_training_type,training_type_group_admin,model_di_training_type,qualiopi.group_qualiopi_admin,1,1,1,1
+access_user_training_type,training_type_group_user,model_di_training_type,qualiopi.group_qualiopi_user,1,1,1,1
+access_portal_training_type,training_type_group_user,model_di_training_type,base.group_portal,1,1,1,1
+
+access_admin_training_date,training_date_group_admin,model_di_training_date,qualiopi.group_qualiopi_admin,1,1,1,1
+access_user_training_date,training_date_group_user,model_di_training_date,qualiopi.group_qualiopi_user,1,1,1,1
+access_portal_training_date,training_date_group_user,model_di_training_date,base.group_portal,1,1,1,1
+
+access_admin_training_presence,training_presence_group_admin,model_di_training_presence,qualiopi.group_qualiopi_admin,1,1,1,1
+access_user_training_presence,training_presence_group_user,model_di_training_presence,qualiopi.group_qualiopi_user,1,1,1,1
+access_portal_training_presence,training_presence_group_user,model_di_training_presence,base.group_portal,1,1,1,1

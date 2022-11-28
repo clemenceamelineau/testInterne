@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="minimal_layout">
+        &lt;!DOCTYPE html&gt;
+        <html style="height: 0;">
+            <head>
+                <base t-att-href="base_url"/>
+                <t t-call-assets="web.report_assets_pdf" t-js="false"/>
+                <t t-call-assets="web.report_assets_common" t-js="false"/>
+                <t t-call-assets="web.report_assets_pdf" t-css="false"/>
+                <meta charset="utf-8"/>
+                <script t-if="subst">
+                    function subst() {
+                        var vars = {};
+                        var x = document.location.search.substring(1).split('&amp;');
+                        for (var i in x) {
+                            var z = x[i].split('=', 2);
+                            vars[z[0]] = unescape(z[1]);
+                        }
+                        var x = ['sitepage', 'sitepages', 'section', 'subsection', 'subsubsection'];
+                        var z = {'sitepage': 'page', 'sitepages': 'topage'};
+                        for (var i in x) {
+                            var y = document.getElementsByClassName(z[x[i]] || x[i])
+                            for (var j=0; j&lt;y.length; ++j)
+                                y[j].textContent = vars[x[i]];
+                        }
+
+                        var index = vars['webpage'].split('.', 4)[3];
+                        var header = document.getElementById('minimal_layout_report_headers');
+                        if(header){
+                            var companyHeader = header.children[index];
+                            header.textContent = '';
+                            header.appendChild(companyHeader);
+                        }
+                        var footer = document.getElementById('minimal_layout_report_footers');
+                        if(footer){
+                            var companyFooter = footer.children[index];
+                            footer.textContent = '';
+                            footer.appendChild(companyFooter);
+                        }
+                    }
+                </script>
+            </head>
+            <body class="container" t-att-data-report-id="report_xml_id" t-att-onload="subst and 'subst()'" style="overflow:hidden">
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+    <template id="report_training_agreement">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="file">  
+                <t t-set="font_color" t-value="file.training_company_id.di_font_color"/>
+                <t t-set="background_color" t-value="file.training_company_id.di_background_color"/>
+                <div class="header">
+                    <img t-if="file.training_company_id.logo" t-att-src="image_data_uri(file.training_company_id.logo)" style="max-width:100pt;max-height:75pt" alt="Logo"/>
+                    <p/>
+                </div>
+                <h2 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">Continuing professional development agreement</h2>
+                
+                <div class="page">
+                    <p style="font-size:12px;font-style:italic;text-align:center">Article L. 6353-1 and D.6353-1 of the Labor Code</p>
+                    <p style="font-weight:bold">Between the undersigned :</p>
+                    <p>
+                        The training organisation <span style="font-weight:bold" t-field="file.training_company_id.name"/> - <span style="font-weight:bold" t-field="file.training_company_id.street"/> - 
+                        <span style="font-weight:bold" t-field="file.training_company_id.zip"/> <span style="font-weight:bold" t-field="file.training_company_id.city"/> - 
+                        SIRET : <span style="font-weight:bold" t-field="file.training_company_id.partner_id.di_siret"/> registered under the activity declaration number <span style="font-weight:bold" t-field="file.training_company_id.di_declaration_number"/> 
+                        with the prefect of the <span style="font-weight:bold" t-field="file.training_company_id.di_prefecture"/> represented by 
+                        <span style="font-weight:bold" t-field="file.training_company_id.di_representative_id.name"/> on one side,
+                    </p>
+                    <p>
+                        And the beneficiary company <span style="font-weight:bold" t-field="file.customer_id.name"/> - <span style="font-weight:bold" t-field="file.customer_id.street"/> - 
+                        <span style="font-weight:bold" t-field="file.customer_id.zip"/> <span style="font-weight:bold" t-field="file.customer_id.city"/> - 
+                        represented by ................................................................................................................................................... on the other side, 
+                    </p>
+                    <p>
+                        And (if the training is financed by an OPCO): name - address : ...................................................................................................................................................
+                    </p>
+                    <p>
+                        The following agreement has been concluded, in application of the provisions of Book III of the Sixth Part of the Labour Code concerning the organization of continuing vocational training.
+                    </p>
+                    
+                    <p style="font-weight:bold;text-decoration:underline">ARTICLE 1 - Purpose of the agreement</p>
+                    <p><span style="font-weight:bold">Nature of the action (article L.6313-1 of the labor code) :</span> Acquisition and improvement of knowledge</p>
+                    <p><span style="font-weight:bold">Title :</span> <span t-field="file.training_type_id.name"/></p>
+                    <p><span style="font-weight:bold">Program and objectives :</span> see annex 1</p>
+                    <p><span style="font-weight:bold">Technical and pedacogical means :</span> computer equipped with the software. Certified consultant trainer on the software</p>
+                    <p><span style="font-weight:bold">Participant(s) :</span> 
+                        <t t-foreach="file.participant_ids" t-as="participant">
+                            <span t-field="participant.name"/> -
+                        </t>
+                    </p>
+                    <p><span style="font-weight:bold">Date(s) :</span> from <span t-field="file.start_date"/> to <span t-field="file.end_date"/></p>
+                    <p><span style="font-weight:bold">Validation of the training :</span> Training certificate and sign-in sheet</p>
+                    <p><span style="font-weight:bold">Place :</span> <span t-field="file.place_name"/></p>
+                    
+                    <t t-set="am" t-value="file.end_hours_am - file.start_hours_am"/>
+                    <t t-set="pm" t-value="file.end_hours_pm - file.start_hours_pm"/>                            
+                    <t t-set="d" t-value="0"/>
+                    <t t-set="h" t-value="0"/>
+                    <t t-foreach="file.date_ids" t-as="date">
+                        <!-- Calcul nombre de jours et d'heures -->
+                        <t t-if="date.date_am == True">
+                            <t t-set="d" t-value="d+0.5"/>
+                            <t t-set="h" t-value="h+am"/>
+                        </t>
+                        <t t-if="date.date_pm == True">
+                            <t t-set="d" t-value="d+0.5"/>
+                            <t t-set="h" t-value="h+pm"/>
+                        </t>
+                    </t>                    
+                    <p><span style="font-weight:bold">Duration of training :</span> <span t-esc="d"/> day(s) (or <span t-esc="h"/> hours) </p>
+                    <p><span style="font-weight:bold">Cost :</span> <span t-field="file.customer_cost"/> H.T.</p>
+                    <p><span style="font-weight:bold">Evaluation :</span> Pratical exercises and questionnaires of the acquired knowledge at the end of the training</p>
+                </div>
+                          
+                <p style="page-break-after:always;"></p>
+                
+                <!-- PAGE 2 -->
+                
+                <div class="page">
+                    <p style="font-weight:bold;text-decoration:underline">ARTICLE 2 - Financial provisions</p>
+                    <t t-set="amounts_due" t-value="file.customer_cost - file.deposit"/>
+                    <p>In return for this training, the employer will pay the following costs : </p>
+                    <p>
+                        <span style="font-weight:bold">Training costs :</span> total cost <span t-field="file.customer_cost"/> H.T. <br/>
+                        <span style="font-weight:bold">Amounts paid by the company as advance payments (if any) :</span> <span t-field="file.deposit"/> <br/>
+                        <span style="font-weight:bold">Amounts still due :</span> <span t-esc="amounts_due"/> H.T.
+                    </p><br/>
+                    <p style="font-weight:bold;text-decoration:underline">ARTICLE 3 - Terms of payment</p>
+                    <p>
+                        The present agreement takes effect as of its signature by the company for the duration referred to in article 1.<br/>
+                        It is the company's responsability to apply for reimbursement from its OPCO and to send us a copy of the prior agreement so that we can issue the invoice to the paying organization.<br/>
+                        In the absence of the latter's agreement, the company remains liable for the invoice.<br/>
+                        Invoices are payable in <span t-field="file.training_company_id.currency_id.currency_unit_label"/>, wihin 30 days of the invoice date, without discount.<br/>
+                        To be paid: by check or bank transfer to the order of <span t-field="file.training_company_id.name"/>.<br/>
+                        All the general conditions of sale are available on <span t-field="file.training_company_id.website"/>.
+                    </p><br/>
+                    <p style="font-weight:bold;text-decoration:underline">ARTICLE 4 - Means allowing to follow the execution, to appreciate the results and to validate the training action</p>
+                    <p>
+                        Each participant must respect and refer to the internal rules of the <span t-field="file.training_company_id.name"/> training organization<br/>
+                        Each participant will have to sign the sign-in sheet for each half day.<br/>
+                        Each participant will be evaluated by means of a questionnaire of the acquired knowledge in connection with the topics approached during the training.<br/>
+                        Each participant will evaluate the quality of the training by means of a hot (at the end of the training) and a cold (in the weeks that follow) evaluations.
+                    </p><br/>
+                    <p style="font-weight:bold;text-decoration:underline">ARTICLE 5 - Various possible</p>
+                    <p>
+                        If a dispute or a difference cannot be settled amicably, the court of La Roche-sur-Yon will be the only one competent to settle the dispute.<br/>
+                        The present signed agreement implies acceptance of the general sales conditions (mentioned in article 3) and the internal regulations
+                    </p><br/>
+                    <p style="text-align:center">Done in triplicate in <span t-field="file.training_company_id.city"/> on 
+                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                    </p><br/>
+                    <div class="row">
+                        <div class="col-6">
+                            <p><span style="font-weight:bold">For the company</span><br/>
+                            (Name and capacity of the signatory)</p>
+                        </div>
+                        <div class="col-6 text-right">
+                            <p><span style="font-weight:bold">For <span t-field="file.training_company_id.name"/></span><br/>
+                            <span t-field="file.training_company_id.di_representative_id.name"/>, <span t-field="file.training_company_id.di_representative_id.function"/></p>
+                            <p><img t-att-src="'data:image/png;base64,%s' % to_text(file.training_company_id.di_signature)" style="width:200pt;height:70pt" alt="Signature"/></p>
+                        </div>
+                    </div>                        
+                </div>
+                
+                <div class="footer">
+                    <h6 t-attf-style="color:#{font_color};background-color:#{background_color};text-align:center">
+                        <span t-field="file.training_company_id.di_footer"/>
+                    </h6>
+                </div>
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>
