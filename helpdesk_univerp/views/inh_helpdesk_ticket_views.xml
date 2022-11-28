@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="helpdesk_univerp_helpdesk_ticket" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.helpdesk.ticket.form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//group/group" position="attributes">
+                <attribute name="attrs">{'readonly': [('stage_id', '=', 5)]}</attribute>
+            </xpath>
+            
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="domain">[('is_company', '=', True)]</attribute>
+                <attribute name="context">{'default_is_company': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('total_hours_spent', '!=', 0)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="before">
+                <xpath expr="//field[@name='partner_id']" position="move"/>
+                
+                <field name="di_project_id" attrs="{'readonly': [('total_hours_spent', '!=', 0)]}" domain="[('partner_id', '=', partner_id)]" context="{'default_partner_id': partner_id}"/>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="di_internal_company_id"/>
+                <field name="di_contact"/>
+            </xpath>
+            <xpath expr="//field[@name='ticket_type_id']" position="attributes">
+                <attribute name='invisible'>1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='email_cc']" position="after">
+                <!--<field name="di_time_total" widget="timesheet_uom"/>-->
+                <field name="total_hours_spent" widget="timesheet_uom" string='Time total'/>
+                <xpath expr="//field[@name='user_id']" position="move"/>
+                <xpath expr="//field[@name='domain_user_ids']" position="move"/>
+                <!--<xpath expr="//field[@name='ticket_type_id']" position="move"/>-->
+                
+                <xpath expr="//field[@name='priority']" position="move"/>
+                <xpath expr="//field[@name='tag_ids']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="replace">
+                <field name="company_id" invisible="1" groups="base.group_multi_company" context="{'create': False}"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="helpdesk_univerp_helpdesk_ticket_form_inherit_timesheet" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.helpdesk.ticket.form.inherit.timesheet</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="priority">30</field>
+        <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='description']" position="before">
+                <page string="Infos" name="infos">
+                    <group>
+                        <group string="Ticket">
+                            
+                            <field name="di_previous_ticket"/>
+                            <field name="di_time_total_billable" widget="timesheet_uom"/>
+                            <field name="di_time_total_no_billable" widget="timesheet_uom"/>
+                        </group>
+                        <group string="Project">
+                            <field name="di_contract_expected_hour" widget="timesheet_uom"/>
+                            <field name="di_contract_time_total" widget="timesheet_uom"/>
+                            <field name="di_contract_time_left" widget="timesheet_uom"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath> 
+            <xpath expr="//page[@name='timesheets']/field/tree/field[@name='name']" position="after">
+                <field name="di_billable" option="show"/>
+                <field name="di_activity_id" option="show"/>
+                <field name="di_time_travel" widget="timesheet_uom" option="show"/>
+            </xpath>
+            <xpath expr="//page[@name='timesheets']/field/tree/field[@name='date']" position="before">
+                <button name="btn_print" string="Print" class="btn btn-secondary" type="object"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="helpdesk_univerp_helpdesk_ticket_create_timesheet_wizard_form" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.helpdesk.ticket.create.timesheet.wizard.form</field>
+        <field name="model">helpdesk.ticket.create.timesheet</field>
+        <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_create_timesheet_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='time_spent']" position="replace">
+                <group>
+                    <field name="time_spent" string="Duration" widget="float_time" required="True"/>
+                    <field name="di_time_travel" widget="float_time"/>
+                </group>
+                <group>
+                    <field name="di_activity_id"/>
+                    <field name="di_billable"/>
+                </group>
+            </xpath> 
+        </field>
+    </record>
+    
+    <record id="helpdesk_univerp_helpdesk_ticket_search" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.helpdesk.ticket.search</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/filter[@name='unassigned']" position="after">
+                <separator/>
+                <filter string="Ticket with chrono" name="ticket_with_chrono" domain="[('user_timer_id', '!=', None)]"/>           
+            </xpath>
+        </field>
+    </record>
+    
+    <record model="ir.actions.server" id="action_update_invoice_date">
+        <field name="name">Cancel and Duplicate</field>
+        <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+        <field name="binding_model_id" ref="helpdesk.model_helpdesk_ticket"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records._cancel_and_duplicate()
+        </field>
+    </record>
+    
+    <!-- HELPDESK STAGE -->
+    <!--<record id="helpdesk_univerp_helpdesk_stage_view_form" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.helpdesk.stage.form</field>
+        <field name="model">helpdesk.stage</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_stage_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='template_id']" position="after">
+                <field name="commercial_template_id" context="{'default_model': 'helpdesk.ticket'}"/>
+            </xpath> 
+        </field>
+    </record>-->
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_intervention_order">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            <t t-foreach="docs" t-as="line">  
+                <div class="row">
+                    <div class="col-6">
+                    </div>
+                    <div class="col-6 text-right">
+                        <p><span t-field="line.helpdesk_ticket_id.partner_name" style="font-weight:bold"/><br/>
+                            <span t-field="line.helpdesk_ticket_id.partner_id.street"/><br/>
+                            <span t-field="line.helpdesk_ticket_id.partner_id.zip"/> <span t-field="line.helpdesk_ticket_id.partner_id.city"/><br/>
+                        </p>
+                    </div>
+                </div> 
+                <br/>
+                <h2 t-attf-style="text-align:center">Intervention order n°<span t-field="line.helpdesk_ticket_id.id"/>.<span t-field="line.id"/> - on <span t-field="line.date"/></h2>
+                
+                <div class="page">       
+                    <h5 t-attf-style="color:white;background-color:#714b67;font-weight:bold;">Object</h5>                         
+                    <p><span t-field="line.helpdesk_ticket_id.name"/></p>
+                    
+                    <h5 t-attf-style="color:white;background-color:#714b67;font-weight:bold;">Intervention</h5>
+                    <p><span t-field="line.name"/></p>
+                    
+                    <h5 t-attf-style="color:white;background-color:#714b67;font-weight:bold;">Duration of the intervention</h5>
+                    <p>Total : <span t-field="line.unit_amount" t-options="{'widget': 'float_time'}"/></p>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>For the Groupe Univerp,<br/><span t-field="line.helpdesk_ticket_id.di_internal_company_id.di_manager_id.name"/></p><br/><br/>
+                    </div>
+                    <div class="col-6 text-right">
+                        <p>For <span t-field="line.helpdesk_ticket_id.partner_name"/><br/>Customer stamp and signature</p><br/><br/>
+                    </div>
+                </div>          
+            </t>
+        </t>
+        </t>
+    </template>
+</odoo>

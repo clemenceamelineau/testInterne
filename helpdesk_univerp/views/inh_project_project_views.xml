@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="helpdesk_univerp_project_project_tree" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.project.project.tree</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="di_internal_company_id" optional="show"/>
+                <field name="di_helpdesk_team_id" optional="show"/>
+                <field name="di_team_type" optional="show"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='last_update_status']" position="after">
+                <field name="di_group_salesperson_id" optional="hide"/>
+                <field name="di_contract_expected_hour" optional="hide"/>
+                <field name="di_time_left" optional="show"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='date_start']" position="replace">
+                <field name="date_start" string="Start Date" widget="daterange" options="{'related_end_date': 'date'}" optional="hide"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='date']" position="replace">
+                <field name="date" string="End Date" widget="daterange" options="{'related_start_date': 'date_start'}" optional="show"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='user_id']" position="replace">
+                <field name="user_id" optional="hide" string="Project Manager" widget="many2one_avatar_user" options="{'no_open':True, 'no_create': True, 'no_create_edit': True}"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='last_update_status']" position="replace">
+                <field name="last_update_status" string="Status" optional="hide" widget="status_with_color" options="{'color_field': 'last_update_color'}"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='company_id']" position="replace">
+                <field name="company_id" optional="hide"  groups="base.group_multi_company" options="{'no_create': True, 'no_create_edit': True}"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="helpdesk_univerp_project_project" model="ir.ui.view">
+        <field name="name">helpedsk.univerp.project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='analytic_account_id']" position="replace">
+                <field name="analytic_account_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]" context="{'default_partner_id': partner_id}"/>
+            </xpath>
+            
+            <xpath expr="//button[@name='%(project.project_milestone_all)d']" position="after">
+                <button class="oe_stat_button" name="action_show_time_total" type="object" icon="fa-clock-o">
+                    <div class="o_field_widget o_stat_info">
+                        <div class="oe_inline">
+                            <span class="o_stat_value mr-1">
+                                <field name="di_time_total" widget="statinfo" nolabel="1"/>
+                            </span>
+                            <span class="o_stat_value">
+                                <field name="timesheet_encode_uom_id" class="o_stat_text" options="{'no_open' : True}"/>
+                            </span>
+                        </div>
+                        <span class="o_stat_text">Recorded</span>
+                    </div>
+                </button>
+            </xpath>
+            
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="domain">[('is_company', '=', True)]</attribute>
+                <attribute name="context">{'default_is_company':False}</attribute>
+            </xpath>
+        
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="di_partner_contact_id" />
+            </xpath>
+            
+            <xpath expr="//field[@name='description']" position="before">
+                <group>
+                    <group>
+                        <field name="di_internal_company_id"/>
+                        <field name="di_external_project"/>
+                        <field name="di_default_activity_id"/>
+                        <field name="di_group_salesperson_id"/>
+                    </group>
+                    <group>
+                        <field name="di_helpdesk_team_id"/>
+                        <field name="di_team_type"/>
+                        <field name="di_contract_is_limited"/>
+                        <field name="di_contract_expected_hour" widget="timesheet_uom" attrs="{'invisible': [('di_contract_is_limited', '=', False)]}"/>
+                        <field name="di_time_total" widget="timesheet_uom"/>
+                        <field name="di_time_left" widget="timesheet_uom"/>
+                    </group>
+                </group>
+            </xpath>
+            
+        </field>
+    </record>
+    <record id="helpdesk_univerp_project_timesheet" model="ir.ui.view">
+        <field name="name">helpedsk.univerp.project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.project_invoice_form"/>
+        <field name="arch" type="xml">
+        
+            <xpath expr="//div[@id='timesheet_settings']" position="replace">
+                <div class="o_setting_left_pane">
+                    <field name="allow_timesheets" invisible='1'/>
+                </div>
+                <div class="o_setting_right_pane">
+                    <label for="allow_timesheets" string="Timesheets" invisible='1'/>
+                    <div class="text-muted" invisible='1'>
+                        Log time on tasks
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="di_activity_time_contract" model="di.time.activity">
+            <field name="name">Contrat</field>
+        </record>
+        <record id="di_activity_time_installation" model="di.time.activity">
+            <field name="name">Installation</field>
+        </record>
+        <record id="di_activity_time_analysis" model="di.time.activity">
+            <field name="name">Analyse</field>
+        </record>
+        <record id="di_activity_time_development" model="di.time.activity">
+            <field name="name">Développement</field>
+        </record>
+        <record id="di_activity_time_configuration" model="di.time.activity">
+            <field name="name">Paramétrage</field>
+        </record>
+        <record id="di_activity_time_training" model="di.time.activity">
+            <field name="name">Formation</field>
+        </record>
+        <record id="di_activity_time_project_management" model="di.time.activity">
+            <field name="name">Conduite de projets</field>
+        </record>
+        <record id="di_activity_time_start_up" model="di.time.activity">
+            <field name="name">Démarrage</field>
+        </record>
+        <record id="di_activity_time_management" model="di.time.activity">
+            <field name="name">Régie</field>
+        </record>
+        <record id="di_activity_time_out_of_contract" model="di.time.activity">
+            <field name="name">Hors contrat</field>
+        </record>
+        <record id="di_activity_time_corporate_life" model="di.time.activity">
+            <field name="name">Vie d'entreprise</field>
+        </record>
+        <record id="di_activity_time_business" model="di.time.activity">
+            <field name="name">Commerce</field>
+        </record>
+    </data>
+</odoo>

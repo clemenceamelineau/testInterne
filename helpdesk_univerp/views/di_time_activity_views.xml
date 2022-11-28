@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="di_time_activity_tree" model="ir.ui.view">
+        <field name="name">di.time.activity.tree</field>
+        <field name="model">di.time.activity</field>        
+        <field name="arch" type="xml">
+            <tree string="Time Activity" import="true" editable="bottom" create="true">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="action_di_time_activity" model="ir.actions.act_window">
+        <field name="name">Time Activity</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.time.activity</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

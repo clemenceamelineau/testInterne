@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="action_internal_company" model="ir.actions.act_window">
+        <field name="name">Internal Company</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="context">{'default_di_internal_company': True, 'default_is_company': True}</field>
+        <field name="domain">[('di_internal_company', '=', True),('is_company', '=', True)]</field>
+    </record>
+    
+    <menuitem id="project.menu_projects" name="Projects" sequence="1" parent="project.menu_main_pm" action="project.open_view_project_all_config"/>
+    <menuitem id="menu_helpdesk_internal_company" name="Internal Company" sequence="10" parent="helpdesk.helpdesk_menu_config"  action="action_internal_company"/>
+    <menuitem id="menu_helpdesk_time_activity" name="Time Activity" sequence="20" parent="helpdesk.helpdesk_menu_config" action="action_di_time_activity"/>
+    
+    <menuitem id="menu_helpdesk_relation" name="Relations" sequence="30" parent="contacts.res_partner_menu_config" action="action_di_relation"/>
+</odoo>

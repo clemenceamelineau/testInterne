@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="helpdesk_univerp_res_partner" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+         
+        <xpath expr="//page[@name='administrative_document']" position="after">
+            <page name="support" string="Support" attrs="{'invisible': [('is_company', '=', False)]}">
+                <group>
+                    <group>
+                        <field name="di_default_contract_id"/>
+                        <field name="di_default_company_id"/>
+                    </group>
+                    <group>
+                        <field name="di_manager_id" context="{'default_parent_id': id}" attrs="{'invisible': [('di_internal_company', '=', False)]}"/>
+                        <field name="di_group_salesperson_id" context="{'default_parent_id': id}" attrs="{'invisible': [('di_internal_company', '=', False)]}"/>
+                    </group>
+                </group>
+            </page>
+            <page name="relations" string="Relations">
+                <field name="di_relation_ids"/>
+            </page>
+        </xpath>
+            
+        </field>
+    </record>
+    
+    <record id="di_res_partner_search" model="ir.ui.view">
+        <field name="name">di.res.partner.search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/filter[@name='type_company']" position="after">
+                <separator/>
+                <filter string="Company (customer)" name="company_customer" domain="[('is_company', '=', True),('di_internal_company', '=', False)]"/>
+                <filter string="Contact (customer)" name="contact_customer" domain="[('parent_id.is_company', '=', True),('parent_id.di_internal_company', '=', False), ('is_company', '=', False)]"/>
+                <filter string="Employee" name="employee" domain="[('parent_id.is_company', '=', True),('parent_id.di_internal_company', '=', True),('is_company', '=', False)]"/>
+                <filter string="Internal company" name="internal_company" domain="[('is_company', '=', True),('di_internal_company', '=', True)]"/>
+                <separator/>                
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

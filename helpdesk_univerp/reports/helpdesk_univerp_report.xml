@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_intervention_order" model="ir.actions.report">
+        <field name="name">Intervention order</field>
+        <field name="model">account.analytic.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">helpdesk_univerp.report_intervention_order</field>
+        <field name="report_file">helpdesk_univerp.report_intervention_order</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+        <field name="binding_model_id" eval="False"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

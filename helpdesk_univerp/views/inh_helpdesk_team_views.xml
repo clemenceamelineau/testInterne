@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="helpdesk_univerp_helpdesk_team" model="ir.ui.view">
+        <field name="name">helpdesk.univerp.helpdesk.team.form</field>
+        <field name="model">helpdesk.team</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_team_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="di_internal_company_id"/>
+                <field name="di_team_type"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
